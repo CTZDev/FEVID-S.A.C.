@@ -1,0 +1,43 @@
+---
+import "@fontsource/poppins/300.css";
+import "@fontsource/poppins/400.css";
+import "@fontsource/poppins/500.css";
+import "@fontsource/poppins/600.css";
+import { ViewTransitions } from "astro:transitions";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Astro description" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title}</title>
+    <ViewTransitions />
+  </head>
+  <body>
+    <slot />
+    <style is:global>
+      :root {
+        --clr-light: #faf6ec;
+        --clr-dark: #371a11;
+        --clr-primary: #d09845;
+        --clr-light-primary: #e8d0a0;
+        --clr-dark-primary: #a56429;
+        --clr-black: #000;
+        --clr-white: #fff;
+      }
+      html {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
+  </body>
+</html>
