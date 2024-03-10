@@ -11,8 +11,8 @@ export default {
         "clr-dark-primary": "#a56429",
         "clr-black": "#000",
         "clr-white": "#fff",
+        "clr-shadow": "#ffbf60",
       },
     },
   },
-  plugins: [],
 };

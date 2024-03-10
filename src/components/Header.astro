@@ -1,16 +1,42 @@
 ---
-// interface Props {
-//   title: string;
-// }
+const links: Array<string> = [
+  "Inicio",
+  "Productos",
+  "Marcas",
+  "Nosotros",
+  "Contáctanos",
+];
 
-// const { title } = Astro.props;
+interface Product {
+  name: string;
+  children?: Product[];
+}
+
+const products: Product[] = [
+  { name: "Eléctricos" },
+  { name: "Energia Solar" },
+  { name: "Cables eléctricos" },
+  { name: "Hidraúlico" },
+  { name: "Gasfitería (Agua)" },
+  { name: "Gasfitería (Cocina - Baño)" },
+  { name: "Línea HDPE" },
+  { name: "Soplador Regenerativo" },
+  { name: "Automatización Industrial" },
+  { name: "Instrumental de nivel y medición" },
+  { name: "Ferreteria Industrial" },
+  { name: "Productos Forestales" },
+  { name: "Implementos de seguridad y limpieza" },
+];
+
+const CLASSLINK_DEFAULT =
+  "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:scale-110 hover:bg-clr-shadow";
 ---
 
-<header class="header p-4 min-h-16 md:px-8 border border-black">
+<header class="header border-b p-4 min-h-16 md:px-8 flex justify-around">
   <nav class="navbar flex justify-between items-center gap-4">
     <a href="/" class="brand">
       <img
-        src="logo.png"
+        src="/logo.png"
         alt="Logo de FAVID S.A.C."
         width="250"
         class="block"
@@ -21,132 +47,111 @@
       <span class="bar"></span>
     </div>
 
-    <ul class="menu flex justify-center items-center flex-col">
-      <a href="/" class="menu-link p-3 border block w-full text-center">
-        Inicio
-      </a>
-      <a href="/" class="menu-link p-3 border block w-full text-center">
-        Productos
-        <ul class="submenu">
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Eléctricos
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Energia Solar
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Cables eléctricos
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Hidraúlico
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Gasfitería
-            <ul class="submenu">
-              <a href="/" class="menu-link p-3 border block w-full text-center">
-                Agua
+    <ul class="menu flex justify-center items-center flex-col overflow-hidden">
+      {
+        links.map(link => (
+          <li class="menu-list border-b w-full">
+            {link !== "Productos" ? (
+              <a href="/" class={CLASSLINK_DEFAULT}>
+                {link}
               </a>
-              <a href="/" class="menu-link p-3 border block w-full text-center">
-                Cocina - Baño
-              </a>
-            </ul>
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Línea HDPE
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Soplador Regenerativo
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Automatización Industrial
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Instrumental de nivel y medición
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Ferreteria Industrial
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Productos Forestales
-          </a>
-          <a href="/" class="menu-link p-3 border block w-full text-center">
-            Implementos de seguridad y limpieza
-          </a>
-        </ul>
-      </a>
-      <a href="/" class="menu-link p-3 border block w-full text-center">
-        Marcas
-      </a>
-      <a href="/" class="menu-link p-3 border block w-full text-center">
-        Nosotros
-      </a>
-      <a href="/" class="menu-link p-3 border block w-full text-center">
-        Contáctanos
-      </a>
+            ) : (
+              <span
+                class={`${CLASSLINK_DEFAULT} bg-clr-shadow text-lg font-bold`}>
+                {link}
+              </span>
+            )}
+
+            {
+              /* This code is apply of products */
+              link === "Productos" && (
+                <ul class="submenu">
+                  {products.map(product => (
+                    <li class="submenu-list border-b w-full ml-6">
+                      <a href="/" class={CLASSLINK_DEFAULT}>
+                        {product.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )
+            }
+          </li>
+        ))
+      }
     </ul>
   </nav>
-
-  <style lang="scss">
-    .header {
-      z-index: 1;
-      margin: 0 auto;
-      position: relative;
-
-      .navbar {
-        width: min(92rem, 100%);
-      }
-
-      .menu {
-        border: 1px solid red;
-        position: absolute;
-        top: calc(4rem + 24px);
-        left: 0;
-        right: 0;
-      }
-    }
-
-    .menu-hamburguer {
-      width: 2.2em;
-      cursor: pointer;
-      user-select: none;
-      transition: all 0.4s ease-in;
-      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-
-      //remove bg blue click
-      &::before,
-      &::after {
-        content: "";
-        width: 90%;
-      }
-
-      .bar,
-      &::before,
-      &::after {
-        display: block;
-        border-radius: 5px;
-        width: 100%;
-        height: 4px;
-        margin: 4px 0;
-        background-color: var(--clr-primary);
-        transition: all 0.15s ease-out;
-      }
-
-      .bar {
-        margin: 0 auto;
-      }
-
-      &.is-active::before {
-        transform: rotate(45deg) translate(6px, 7px);
-      }
-
-      &.is-active::after {
-        transform: rotate(-45deg) translate(2px, -4px);
-      }
-
-      &.is-active > .bar {
-        opacity: 0;
-        visibility: hidden;
-      }
-    }
-  </style>
 </header>
+
+<style lang="scss">
+  .header {
+    z-index: 1;
+    margin: 0 auto;
+    position: relative;
+
+    .navbar {
+      width: min(92rem, 100%);
+    }
+
+    .menu {
+      position: absolute;
+      top: calc(4rem + 24px);
+      left: 0;
+      right: 0;
+
+      & li:last-child {
+        border-bottom: 0;
+      }
+    }
+
+    .submenu {
+      & li:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+
+  .menu-hamburguer {
+    width: 2.2em;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.4s ease-in;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+    //remove bg blue click
+    &::before,
+    &::after {
+      content: "";
+      width: 90%;
+    }
+
+    .bar,
+    &::before,
+    &::after {
+      display: block;
+      border-radius: 5px;
+      width: 100%;
+      height: 4px;
+      margin: 4px 0;
+      background-color: var(--clr-primary);
+      transition: all 0.15s ease-out;
+    }
+
+    .bar {
+      margin: 0 auto;
+    }
+
+    &.is-active::before {
+      transform: rotate(45deg) translate(6px, 7px);
+    }
+
+    &.is-active::after {
+      transform: rotate(-45deg) translate(2px, -4px);
+    }
+
+    &.is-active > .bar {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+</style>
