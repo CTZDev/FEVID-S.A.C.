@@ -1,40 +1,10 @@
 ---
-const links: Array<string> = [
-  "Inicio",
-  "Productos",
-  "Marcas",
-  "Nosotros",
-  "Contáctanos",
-];
-
-interface Product {
-  name: string;
-  children?: Product[];
-}
-
-const products: Product[] = [
-  { name: "Eléctricos" },
-  { name: "Energia Solar" },
-  { name: "Cables eléctricos" },
-  { name: "Hidraúlico" },
-  { name: "Gasfitería (Agua)" },
-  { name: "Gasfitería (Cocina - Baño)" },
-  { name: "Línea HDPE" },
-  { name: "Soplador Regenerativo" },
-  { name: "Automatización Industrial" },
-  { name: "Instrumental de nivel y medición" },
-  { name: "Ferreteria Industrial" },
-  { name: "Productos Forestales" },
-  { name: "Implementos de seguridad y limpieza" },
-];
-
-const CLASSLINK_DEFAULT =
-  "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:scale-110 hover:bg-clr-shadow";
+import Menu from "./Menu.astro";
 ---
 
-<header class="header border-b p-4 min-h-16 md:px-8 flex justify-around">
-  <nav class="navbar flex justify-between items-center gap-4">
-    <a href="/" class="brand">
+<header class="header border-b p-4 min-h-16 flex justify-around w-full">
+  <nav class="navbar flex items-center justify-between gap-4 w-[90rem]">
+    <a href="" class="brand">
       <img
         src="/logo.png"
         alt="Logo de FAVID S.A.C."
@@ -43,43 +13,11 @@ const CLASSLINK_DEFAULT =
       />
     </a>
 
-    <div class="menu-hamburguer hide-for-desktop">
+    <div class="menu-hamburguer">
       <span class="bar"></span>
     </div>
 
-    <ul class="menu flex justify-center items-center flex-col overflow-hidden">
-      {
-        links.map(link => (
-          <li class="menu-list border-b w-full">
-            {link !== "Productos" ? (
-              <a href="/" class={CLASSLINK_DEFAULT}>
-                {link}
-              </a>
-            ) : (
-              <span
-                class={`${CLASSLINK_DEFAULT} bg-clr-shadow text-lg font-bold`}>
-                {link}
-              </span>
-            )}
-
-            {
-              /* This code is apply of products */
-              link === "Productos" && (
-                <ul class="submenu">
-                  {products.map(product => (
-                    <li class="submenu-list border-b w-full ml-6">
-                      <a href="/" class={CLASSLINK_DEFAULT}>
-                        {product.name}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              )
-            }
-          </li>
-        ))
-      }
-    </ul>
+    <Menu />
   </nav>
 </header>
 
@@ -88,27 +26,6 @@ const CLASSLINK_DEFAULT =
     z-index: 1;
     margin: 0 auto;
     position: relative;
-
-    .navbar {
-      width: min(92rem, 100%);
-    }
-
-    .menu {
-      position: absolute;
-      top: calc(4rem + 24px);
-      left: 0;
-      right: 0;
-
-      & li:last-child {
-        border-bottom: 0;
-      }
-    }
-
-    .submenu {
-      & li:last-child {
-        border-bottom: 0;
-      }
-    }
   }
 
   .menu-hamburguer {
@@ -134,6 +51,7 @@ const CLASSLINK_DEFAULT =
       height: 4px;
       margin: 4px 0;
       background-color: var(--clr-primary);
+      pointer-events: none;
       transition: all 0.15s ease-out;
     }
 
@@ -142,7 +60,7 @@ const CLASSLINK_DEFAULT =
     }
 
     &.is-active::before {
-      transform: rotate(45deg) translate(6px, 7px);
+      transform: rotate(45deg) translate(7px, 9px);
     }
 
     &.is-active::after {

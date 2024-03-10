@@ -1,0 +1,86 @@
+---
+import { LINKS, PRODUCTS } from "../types/nav-data.ts";
+
+const CLASSLINKS_DEFAULT =
+  "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:text-base hover:bg-clr-shadow";
+---
+
+<ul class="menu flex justify-center items-center flex-col overflow-hidden">
+  {
+    LINKS.map(link => (
+      <li class="menu-list border-b w-full">
+        {link !== "Productos" ? (
+          <a href="" class={CLASSLINKS_DEFAULT}>
+            {link}
+          </a>
+        ) : (
+          <span
+            class={`${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold`}>
+            {link}
+          </span>
+        )}
+
+        {
+          /* This code is apply of products */
+          link === "Productos" && (
+            <ul class="submenu last:border-b-0">
+              {PRODUCTS.map(product => (
+                <li class="submenu-list border-b w-full">
+                  <a href="" class={`${CLASSLINKS_DEFAULT} pl-8`}>
+                    {product.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          )
+        }
+      </li>
+    ))
+  }
+</ul>
+
+<style lang="scss">
+  .menu {
+    position: absolute;
+    top: calc(4rem + 24px);
+    left: 0;
+    right: 0;
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 250ms ease-in;
+    & li:last-child {
+      border-bottom: 0;
+    }
+
+    &.is-active {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+</style>
+
+<script>
+  const $menuHamburguer = document.querySelector(".menu-hamburguer");
+  const $panelMenu = document.querySelector(".menu");
+
+  document.addEventListener("click", e => {
+    const isEvent = e.target instanceof Element;
+
+    // Add class "isActive" when clicking on Hamburguer
+    if (e.target === $menuHamburguer) {
+      $panelMenu?.classList.toggle("is-active");
+      $menuHamburguer?.classList.toggle("is-active");
+    }
+
+    // Remove class "isActive" of the Panel and menuHamburguer
+    if (
+      (isEvent && e.target.matches(".menu-list")) ||
+      (isEvent && e.target.matches(".submenu-list"))
+    ) {
+      $panelMenu?.classList.remove("is-active");
+      $menuHamburguer?.classList.remove("is-active");
+    }
+  });
+</script>
