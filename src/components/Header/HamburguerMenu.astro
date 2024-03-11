@@ -1,38 +1,9 @@
----
-import Menu from "./Menu.astro";
----
-
-<header class="header border-b p-4 min-h-16 flex justify-around w-full">
-  <nav class="navbar flex items-center justify-between gap-4 w-[90rem]">
-    <a href="" class="brand">
-      <img
-        src="/logo.png"
-        alt="Logo de FAVID S.A.C."
-        width="250"
-        class="block"
-      />
-    </a>
-
-    <div class="menu-hamburguer">
-      <span class="bar"></span>
-    </div>
-
-    <Menu />
-  </nav>
-</header>
+<div class="menu-hamburguer w-9 cursor-pointer select-none transition-all">
+  <span class="bar mr-auto"></span>
+</div>
 
 <style lang="scss">
-  .header {
-    z-index: 1;
-    margin: 0 auto;
-    position: relative;
-  }
-
   .menu-hamburguer {
-    width: 2.2em;
-    cursor: pointer;
-    user-select: none;
-    transition: all 0.4s ease-in;
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 
     //remove bg blue click
@@ -53,10 +24,6 @@ import Menu from "./Menu.astro";
       background-color: var(--clr-primary);
       pointer-events: none;
       transition: all 0.15s ease-out;
-    }
-
-    .bar {
-      margin: 0 auto;
     }
 
     &.is-active::before {

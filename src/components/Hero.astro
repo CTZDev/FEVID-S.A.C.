@@ -1,0 +1,62 @@
+---
+import Button from "./Button.astro";
+---
+
+<div class="hero relative">
+  <figure class="relative inline-block overflow-hidden w-full">
+    <img
+      src="hero.jpg"
+      alt="Industrial Products"
+      class="block object-cover w-full h-screen -mt-20"
+    />
+  </figure>
+
+  <div
+    class="hero-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-10 md:gap-16">
+    <div class="text-white text-center w-80 md:w-[700px]">
+      <h2 class="text-4xl md:text-7xl font-bold mb-8">
+        <p>
+          Bienvenido a <span class="block">FEVID S.A.C.</span>
+        </p>
+      </h2>
+      <p class="text-sm md:text-xl font-medium">
+        Venta al por mayor y menor de todo tipo de productos industriales en
+        general, como: productos eléctricos, estructuras metálicas livianas y
+        pesadas, herramientas eléctricas y manuales, productos y materiales para
+        gasfitería, implementos de seguridad, materiales de construcción,
+        productos forestales, proveeduría, ferretería en general, servicios,
+        entre otros.
+      </p>
+    </div>
+
+    <div
+      class="hero-buttons flex flex-col md:flex-row gap-3 items-center justify-center">
+      <Button
+        className="btn-wsp"
+        src="whatsApp.svg"
+        alt="Icono de WhatsApp"
+        contentText="Cotizar por Whatsapp"
+      />
+
+      <Button
+        className="btn-email"
+        src="outlook.svg"
+        alt="Icono de Outlook"
+        contentText="Cotizar por Email"
+      />
+    </div>
+  </div>
+</div>
+
+<style lang="scss">
+  figure::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(3px);
+  }
+</style>
