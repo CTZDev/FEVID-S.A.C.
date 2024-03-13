@@ -1,5 +1,5 @@
 ---
-import { LINKS, PRODUCTS } from "../../types/nav-data.ts";
+import { LINKS, PRODUCTS } from "../../services/products";
 
 const CLASSLINKS_DEFAULT =
   "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:text-base hover:bg-clr-shadow";
@@ -11,12 +11,12 @@ const CLASSLINKS_DEFAULT =
     LINKS.map(link => (
       <li class="menu-list border-b w-full">
         {link !== "Productos" ? (
-          <a href="" class={CLASSLINKS_DEFAULT}>
+          <a href="/" class={`${CLASSLINKS_DEFAULT} block`}>
             {link}
           </a>
         ) : (
           <span
-            class={`${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold`}>
+            class={`${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold block`}>
             {link}
           </span>
         )}
@@ -27,7 +27,7 @@ const CLASSLINKS_DEFAULT =
             <ul class="submenu last:border-b-0">
               {PRODUCTS.map(product => (
                 <li class="submenu-list border-b w-full">
-                  <a href="" class={`${CLASSLINKS_DEFAULT} pl-8`}>
+                  <a href="/" class={`${CLASSLINKS_DEFAULT} pl-8 block`}>
                     {product.name}
                   </a>
                 </li>

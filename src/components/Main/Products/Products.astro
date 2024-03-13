@@ -1,0 +1,40 @@
+---
+import HeaderSection from "../HeaderSection.astro";
+import { PRODUCTS } from "../../../services/products";
+import Card from "../../Main/Products/Card.astro";
+---
+
+<section>
+  <HeaderSection
+    title="Nuestros Productos"
+    contentText=`"Disponemos de productos de primera calidad y con las mejores marcas
+    que aseguren la satisfacción y confianza de nuestros clientes."`
+  />
+
+  <div class="cards mb-12">
+    {
+      PRODUCTS.map((prod, i) => (
+        <Card
+          className={`card-${i + 1}`}
+          title={prod.name}
+          src={prod.img}
+          href={prod.url}
+        />
+      ))
+    }
+  </div>
+</section>
+
+<style>
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .cards {
+      grid-template-columns: repeat(auto-fill, minmax(20.25rem, 1fr));
+    }
+  }
+</style>

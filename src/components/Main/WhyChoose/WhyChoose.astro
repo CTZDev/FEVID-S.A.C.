@@ -1,0 +1,47 @@
+---
+import Feature from "../WhyChoose/Feature.astro";
+import HeaderSection from "../HeaderSection.astro";
+---
+
+<section>
+  <HeaderSection
+    title="¿Porqué FEVID?"
+    contentText=`"Nuestra empresa se basa en la calidad, integridad, servicio al cliente,
+    innovación y seguridad."`
+  />
+
+  <div
+    class="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-20 lg:gap-12 xl:grid-cols-4">
+    <Feature
+      title="Grandes marcas a mejores precios"
+      className="md:mr-0"
+      src="section-who/marcas.gif"
+      alt="Imagen de mejores marcas"
+      contentText="Tenemos las mejores marcas en productos industriales nacionales e importados a precios asequibles."
+    />
+
+    <Feature
+      title="Seguridad en la que puedes confiar"
+      className="md:ml-0"
+      src="section-who/seguridad.gif"
+      alt="Imagen de Seguridad"
+      contentText="Confía en nosotros para ofrecerte productos y servicios que cumplen con los más altos estándares de seguridad."
+    />
+
+    <Feature
+      title="Gran variedad en nuestros productos"
+      className="md:mr-0"
+      src="section-who/productos.gif"
+      alt="Imagen de gama de productos"
+      contentText="Explora nuestra amplia gama de productos. Descubre la gran variedad de opciones que tenemos para ti."
+    />
+
+    <Feature
+      title="Disponibilidad las 24hrs del día"
+      className="md:ml-0"
+      src="section-who/tiempo.gif"
+      alt="Imagen de 24horas"
+      contentText="Accede a nuestros servicios en cualquier momento del día. Brindamos atención continua para satisfacer tus necesidades."
+    />
+  </div>
+</section>

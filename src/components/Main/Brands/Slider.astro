@@ -1,0 +1,40 @@
+---
+import Slide from "./Slide.astro";
+const TOTAL_BRANDS = 24;
+---
+
+<article class="slider">
+  <div class="slider-track">
+    {
+      Array.from({ length: TOTAL_BRANDS }, (_, i) => (
+        <Slide src={`brands/brand${i + 1}.png`} alt={`Brand - ${i + 1}`} />
+      ))
+    }
+  </div>
+</article>
+
+<style>
+  .slider {
+    height: 200px;
+    margin: auto;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+  }
+
+  .slider-track {
+    display: flex;
+    width: calc(600px * 24);
+    animation: scroll 40s linear infinite;
+    filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.5));
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-600px * 12));
+    }
+  }
+</style>
