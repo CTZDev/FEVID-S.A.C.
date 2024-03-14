@@ -1,8 +1,8 @@
 export const LINKS: Array<string> = [
   "Inicio",
   "Productos",
-  "Marcas",
   "Nosotros",
+  "Marcas",
   "Contáctanos",
 ];
 

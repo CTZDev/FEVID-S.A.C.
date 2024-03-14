@@ -1,0 +1,30 @@
+---
+interface Props {
+  label: string;
+  key: string;
+  placeholder: string;
+}
+
+const { label, key, placeholder } = Astro.props;
+---
+
+<div class="mb-6">
+  <label class="block text-gray-700 font-bold mb-2 text-left" for={key}>
+    {label}
+    <span class="text-red-500 font-bold text-base pl-0.5">*</span>
+  </label>
+
+  <textarea
+    rows="5"
+    cols="20"
+    class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    id={key}
+    name={key}
+    placeholder={placeholder}
+    required>
+  </textarea>
+</div>
+
+<script>
+  document.querySelector("textarea").value = "";
+</script>

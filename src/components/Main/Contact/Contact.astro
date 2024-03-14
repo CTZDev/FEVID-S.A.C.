@@ -1,0 +1,56 @@
+---
+import HeaderSection from "../HeaderSection.astro";
+import Button from "../../Button.astro";
+import Input from "../../Input.astro";
+import TextArea from "../../TextArea.astro";
+import HeaderContact from "./HeaderContact.astro";
+---
+
+<section>
+  <HeaderSection
+    title="¿Cómo contactarnos?"
+    contentText=`"Ingresa tu solicitud y procederemos a brindarle más detalles del catálogo de nuestros productos"`
+  />
+
+  <div
+    class="bg-white rounded-lg shadow-2xl px-6 py-8 max-w-[768px] m-auto flex flex-col gap-6 lg:max-w-[1024px] lg:px-12 lg:py-12">
+    <HeaderContact
+      title="RELLENA EL FORMULARIO"
+      text=`“Una vez que tu mensaje sea enviado, será recibido con prioridad por
+            nuestro equipo. Te aseguramos una respuesta, en el menor tiempo
+            posible.”`
+    />
+
+    <form
+      action="#"
+      method="get"
+      class="form-body text-sm md:text-base lg:text-lg">
+      <Input
+        label="Nombres completos"
+        key="fullName"
+        type="text"
+        placeholder="Escribe tus nombres completos"
+      />
+
+      <Input
+        label="Correo electrónico"
+        key="email"
+        type="email"
+        placeholder="Digita tu correo electrónico"
+      />
+
+      <TextArea
+        label="Mensaje"
+        key="send"
+        placeholder="Ingresa los productos que necesitas cotizar y obtener información"
+      />
+
+      <Button
+        className="btn-form m-auto"
+        src="send.svg"
+        alt="Send Form"
+        contentText="Enviar formulario"
+      />
+    </form>
+  </div>
+</section>
