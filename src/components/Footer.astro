@@ -1,1 +1,61 @@
-<footer class="px-4 py-8 md:py-16 md:pb-12"></footer>
+<footer class="footer bg-clr-shadow text-black px-4 py-8 md:py-16 md:mt-12">
+  <figure class="footer-logo mb-8 lg:mb-16">
+    <img
+      src="logo.png"
+      alt="Logo"
+      width="400"
+      height="auto"
+      class="m-auto lg:w-[800px]"
+    />
+  </figure>
+  <div
+    class="footer-content grid grid-cols-1 sm:place-items-center lg:grid-cols-2 lg:items-start">
+    <div class="footer-contact mb-4">
+      <h4 class="text-center text-lg font-semibold pb-4 lg:text-2xl">
+        Información destacada
+      </h4>
+      <div class="footer-contact-content text-sm lg:text-lg">
+        <p class="footer-contact-direction mb-4 before:mr-4">
+          Mz N Lt.9 Asoc. Montercarlo I San Martín de Porres - Lima, Perú.
+        </p>
+        <p class="footer-contact-phone mb-4 before:mr-4">+51-923157517</p>
+        <p class="footer-contact-gmail mb-2 before:mr-4">fevidsac@gmail.com</p>
+        <p class="footer-contact-hotmail mb-4 before:mr-2">
+          fevidsac@hotmail.com
+        </p>
+      </div>
+    </div>
+
+    <div class="footer-socialmedia">
+      <h4 class="text-center font-semibold pb-4 text-lg lg:text-2xl">
+        Redes Sociales
+      </h4>
+      <div class="footer-socialmedia-content flex gap-2.5 justify-center">
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="facebook.svg" alt="Icon Facebook" width="30" height="30" />
+        </a>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+          <img src="linkedin.svg" alt="Icon Linkedin" width="30" height="30" />
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <style lang="scss">
+    .footer-contact-direction::before {
+      content: url("icon-location.svg");
+    }
+
+    .footer-contact-phone::before {
+      content: url("icon-phone.svg");
+    }
+
+    .footer-contact-gmail::before {
+      content: url("icon-gmail.svg");
+    }
+
+    .footer-contact-hotmail::before {
+      content: url("icon-hotmail.svg");
+    }
+  </style>
+</footer>
