@@ -1,0 +1,21 @@
+---
+export interface Props {
+  src: string;
+  alt: string;
+  shadow?: string;
+  classPosition: string;
+  classImg: string;
+}
+
+const { src, alt, shadow, classPosition, classImg } = Astro.props;
+---
+
+<a
+  href="#"
+  class={`cursor-pointer fixed rounded-full transform hover:scale-110 transition-transform  ${classPosition}`}>
+  <img
+    src={src}
+    alt={alt}
+    class=`${classImg} drop-shadow-[1px_1px_2px_${shadow}]`
+  />
+</a>

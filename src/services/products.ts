@@ -33,7 +33,7 @@ export const PRODUCTS: Product[] = [
   },
   { name: "Línea HDPE", url: "#", img: "products/HDPE.webp" },
   {
-    name: "Soplador Regenerativo",
+    name: "Sopladores Regenerativos",
     url: "#",
     img: "products/soplador-regenerativo.webp",
   },
@@ -43,7 +43,7 @@ export const PRODUCTS: Product[] = [
     img: "products/automatizacion-industrial.webp",
   },
   {
-    name: "Instrumental de nivel y medición",
+    name: "Instrumental de Nivel y Medición",
     url: "#",
     img: "products/instrumental-nivel-medicion.webp",
   },
@@ -58,7 +58,7 @@ export const PRODUCTS: Product[] = [
     img: "products/productos-forestales.webp",
   },
   {
-    name: "Implementos de seguridad y limpieza",
+    name: "Implementos de Seguridad y Limpieza",
     url: "#",
     img: "products/productos-seguridad.webp",
   },
