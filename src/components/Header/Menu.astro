@@ -9,14 +9,14 @@ const CLASSLINKS_DEFAULT =
   class="menu flex justify-center items-center flex-col overflow-hidden absolute top-full left-0 right-0 transition-all bg-white">
   {
     LINKS.map(link => (
-      <li class="menu-list border-b w-full">
+      <li class="menu-item border-b w-full xl:border-0">
         {link !== "Productos" ? (
           <a href="/" class={`${CLASSLINKS_DEFAULT} block`}>
             {link}
           </a>
         ) : (
           <span
-            class={`${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold block`}>
+            class={`${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold`}>
             {link}
           </span>
         )}
@@ -26,7 +26,7 @@ const CLASSLINKS_DEFAULT =
           link === "Productos" && (
             <ul class="submenu last:border-b-0">
               {PRODUCTS.map(product => (
-                <li class="submenu-list border-b w-full">
+                <li class="submenu-item border-b w-full">
                   <a href="/" class={`${CLASSLINKS_DEFAULT} pl-8 block`}>
                     {product.name}
                   </a>
@@ -56,28 +56,131 @@ const CLASSLINKS_DEFAULT =
       visibility: visible;
     }
   }
+
+  @media screen and (min-width: 1280px) {
+    .menu {
+      transform: translateX(0);
+      opacity: 1;
+      visibility: visible;
+      position: initial;
+      display: flex;
+      flex-direction: row;
+      border: none;
+      gap: 1.5rem;
+      margin-top: 0.6rem;
+      overflow: visible;
+
+      &-item > a,
+      &-item > span {
+        font-weight: 500;
+        border-bottom: 3px solid transparent;
+        transition: all 250ms ease-in-out;
+        position: relative;
+        background-color: transparent;
+        padding: 0.3rem 0;
+        height: 100%;
+        padding: 1.4rem 0;
+
+        &::before {
+          content: "";
+          display: inline-block;
+          width: 0;
+          position: absolute;
+          bottom: 1.1rem;
+          left: 0;
+          border-bottom: 3px solid #ffbf60;
+          transition: all 450ms ease-in-out;
+          border-radius: 3px;
+        }
+
+        &:hover::before {
+          width: 100%;
+          box-shadow: 1px 1px 2px #ffbf60;
+        }
+      }
+
+      &-item > span:hover::before {
+        width: calc(100% + 25px);
+      }
+    }
+
+    .submenu {
+      position: absolute;
+      max-height: 0;
+      opacity: 0;
+      visibility: hidden;
+      background-color: #fff;
+      top: 100%;
+      width: 350px;
+      transition: all 300ms ease-in-out;
+
+      &-item {
+        border-bottom: 1px solid rgba(#999, 0.2);
+        & > a {
+          padding-left: 0.5rem;
+        }
+      }
+    }
+
+    // Active button of list the products
+    .menu-item > span {
+      margin-right: 1rem;
+    }
+
+    .menu-item > span::after {
+      content: url("chevron-down.svg");
+      position: absolute;
+      top: 50%;
+      right: -25px;
+      transform: translateY(calc(-50% + 0.2rem));
+      display: inline-block;
+      transition: transform 250ms ease-in-out;
+    }
+
+    .menu-item > span.is-active::after {
+      transform: translateY(calc(-50% - 0.2rem)) rotate(180deg);
+    }
+
+    .menu-item > span.is-active::before {
+      width: calc(100% + 25px);
+      box-shadow: 1px 1px 2px #ffbf60;
+    }
+
+    .menu-item > span.is-active ~ .submenu {
+      max-height: 1200px;
+      visibility: visible;
+      opacity: 1;
+    }
+  }
 </style>
 
 <script>
-  const $menuHamburguer = document.querySelector(".menu-hamburguer");
-  const $panelMenu = document.querySelector(".menu");
+  const menuHamburguer: HTMLElement | null =
+    document.querySelector(".menu-hamburguer");
+  const panelMenu: HTMLElement | null = document.querySelector(".menu");
 
-  document.addEventListener("click", e => {
+  document.addEventListener("click", (e: Event) => {
     const isEvent = e.target instanceof Element;
 
     // Add class "isActive" when clicking on Hamburguer
-    if (e.target === $menuHamburguer) {
-      $panelMenu?.classList.toggle("is-active");
-      $menuHamburguer?.classList.toggle("is-active");
+    if (e.target === menuHamburguer) {
+      panelMenu?.classList.toggle("is-active");
+      menuHamburguer?.classList.toggle("is-active");
     }
 
     // Remove class "isActive" of the Panel and menuHamburguer
     if (
-      (isEvent && e.target.matches(".menu-list")) ||
-      (isEvent && e.target.matches(".submenu-list"))
+      (isEvent && e.target.matches(".menu-item")) ||
+      (isEvent && e.target.matches(".submenu-item"))
     ) {
-      $panelMenu?.classList.remove("is-active");
-      $menuHamburguer?.classList.remove("is-active");
+      panelMenu?.classList.remove("is-active");
+      menuHamburguer?.classList.remove("is-active");
+    }
+
+    // Active Submenu elements
+    if (isEvent && e.target.matches(".menu-item > span")) {
+      e.target?.classList.toggle("is-active");
+      e.target.querySelector("::after")?.classList.toggle("is-active");
     }
   });
 </script>

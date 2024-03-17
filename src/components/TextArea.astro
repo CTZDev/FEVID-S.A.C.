@@ -26,5 +26,6 @@ const { label, key, placeholder } = Astro.props;
 </div>
 
 <script>
-  document.querySelector("textarea").value = "";
+  const $textarea = document.querySelector("textarea");
+  if ($textarea) $textarea.value = "";
 </script>
