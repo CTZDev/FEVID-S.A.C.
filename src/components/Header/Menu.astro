@@ -128,17 +128,21 @@ const CLASSLINKS_DEFAULT =
     }
 
     .menu-item > span::after {
-      content: url("chevron-down.svg");
+      content: "";
       position: absolute;
       top: 50%;
       right: -25px;
-      transform: translateY(calc(-50% + 0.2rem));
+      transform: translateY(calc(-50% - 0.05rem));
       display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      background-image: url("down.svg");
       transition: transform 250ms ease-in-out;
     }
 
     .menu-item > span.is-active::after {
-      transform: translateY(calc(-50% - 0.2rem)) rotate(180deg);
+      transform: translateY(calc(-50% - 0.05rem)) rotate(180deg);
     }
 
     .menu-item > span.is-active::before {

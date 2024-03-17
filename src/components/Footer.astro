@@ -15,12 +15,16 @@
         Información destacada
       </h4>
       <div class="footer-contact-content text-sm lg:text-lg">
-        <p class="footer-contact-direction mb-4 before:mr-4">
+        <p class="footer-contact-direction mb-4 flex items-center gap-4">
           Mz N Lt.9 Asoc. Montercarlo I San Martín de Porres - Lima, Perú.
         </p>
-        <p class="footer-contact-phone mb-4 before:mr-4">+51-923157517</p>
-        <p class="footer-contact-gmail mb-2 before:mr-4">fevidsac@gmail.com</p>
-        <p class="footer-contact-hotmail mb-4 before:mr-2">
+        <p class="footer-contact-phone mb-4 flex items-center gap-4">
+          +51-923157517
+        </p>
+        <p class="footer-contact-gmail mb-2 flex items-center gap-4">
+          fevidsac@gmail.com
+        </p>
+        <p class="footer-contact-hotmail mb-4 flex items-center gap-4">
           fevidsac@hotmail.com
         </p>
       </div>
@@ -42,20 +46,30 @@
   </div>
 
   <style lang="scss">
-    .footer-contact-direction::before {
-      content: url("icon-location.svg");
+    .footer-contact-direction:before,
+    .footer-contact-phone:before,
+    .footer-contact-gmail:before,
+    .footer-contact-hotmail:before {
+      content: "";
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
     }
 
-    .footer-contact-phone::before {
-      content: url("icon-phone.svg");
+    .footer-contact-direction:before {
+      background-image: url("location.svg");
     }
 
-    .footer-contact-gmail::before {
-      content: url("icon-gmail.svg");
+    .footer-contact-phone:before {
+      background-image: url("phone.svg");
     }
 
-    .footer-contact-hotmail::before {
-      content: url("icon-hotmail.svg");
+    .footer-contact-gmail:before {
+      background-image: url("gmail.svg");
+    }
+
+    .footer-contact-hotmail:before {
+      background-image: url("hotmail.svg");
     }
   </style>
 </footer>
