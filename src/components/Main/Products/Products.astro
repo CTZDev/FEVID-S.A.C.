@@ -4,7 +4,7 @@ import { PRODUCTS } from "../../../services/products";
 import Card from "../../Main/Products/Card.astro";
 ---
 
-<section>
+<section class="products">
   <HeaderSection
     title="Nuestros Productos"
     contentText=`"Disponemos de productos de primera calidad y con las mejores marcas
@@ -38,3 +38,13 @@ import Card from "../../Main/Products/Card.astro";
     }
   }
 </style>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+
+  ScrollReveal().reveal(".products", {
+    distance: "500px",
+    duration: 900,
+    easing: "ease-in-out",
+  });
+</script>

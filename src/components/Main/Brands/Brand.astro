@@ -3,7 +3,7 @@ import HeaderSection from "../HeaderSection.astro";
 import Slider from "../Brands/Slider.astro";
 ---
 
-<section>
+<section class="brands">
   <HeaderSection
     title="Marcas que cotizamos"
     contentText=`"Descubre el poder y la distinción detrás de cada marca que elegimos cuidadosamente para ti."`
@@ -11,3 +11,13 @@ import Slider from "../Brands/Slider.astro";
 
   <Slider />
 </section>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+
+  ScrollReveal().reveal(".brands", {
+    distance: "500px",
+    duration: 900,
+    easing: "ease-in-out",
+  });
+</script>

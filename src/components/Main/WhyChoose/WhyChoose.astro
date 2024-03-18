@@ -3,7 +3,7 @@ import Feature from "../WhyChoose/Feature.astro";
 import HeaderSection from "../HeaderSection.astro";
 ---
 
-<section>
+<section class="why">
   <HeaderSection
     title="¿Porqué FEVID?"
     contentText=`"Nuestra empresa se basa en la calidad, integridad, servicio al cliente,
@@ -45,3 +45,13 @@ import HeaderSection from "../HeaderSection.astro";
     />
   </div>
 </section>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+
+  ScrollReveal().reveal(".why", {
+    distance: "500px",
+    duration: 900,
+    easing: "ease-in-out",
+  });
+</script>

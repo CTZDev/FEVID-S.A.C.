@@ -6,7 +6,7 @@ import TextArea from "../../TextArea.astro";
 import HeaderContact from "./HeaderContact.astro";
 ---
 
-<section>
+<section class="contact-main">
   <HeaderSection
     title="¿Cómo contactarnos?"
     contentText=`"Ingresa tu solicitud y procederemos a brindarle más detalles del catálogo de nuestros productos"`
@@ -47,10 +47,20 @@ import HeaderContact from "./HeaderContact.astro";
 
       <Button
         className="btn-form m-auto"
-        src="send.svg"
+        src="/send.svg"
         alt="Send Form"
         contentText="Enviar formulario"
       />
     </form>
   </div>
 </section>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+
+  ScrollReveal().reveal(".contact-main", {
+    distance: "500px",
+    duration: 900,
+    easing: "ease-in-out",
+  });
+</script>

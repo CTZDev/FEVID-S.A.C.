@@ -1,7 +1,7 @@
 <footer class="footer bg-clr-shadow text-black px-4 py-5">
   <figure class="footer-logo mb-8 lg:mb-16">
     <img
-      src="logo.png"
+      src="/logo.png"
       alt="Logo"
       width="400"
       height="auto"
@@ -36,10 +36,10 @@
       </h4>
       <div class="footer-socialmedia-content flex gap-2.5 justify-center">
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <img src="facebook.svg" alt="Icon Facebook" width="30" height="30" />
+          <img src="/facebook.svg" alt="Icon Facebook" width="30" height="30" />
         </a>
         <a href="#" target="_blank" rel="noopener noreferrer">
-          <img src="linkedin.svg" alt="Icon Linkedin" width="30" height="30" />
+          <img src="/linkedin.svg" alt="Icon Linkedin" width="30" height="30" />
         </a>
       </div>
     </div>
@@ -73,3 +73,14 @@
     }
   </style>
 </footer>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+
+  ScrollReveal().reveal(".footer", {
+    distance: "500px",
+    duration: 900,
+    origin: "left",
+    easing: "ease-in-out",
+  });
+</script>

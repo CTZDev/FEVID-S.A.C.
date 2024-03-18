@@ -2,17 +2,17 @@
 import Button from "./Button.astro";
 ---
 
-<div class="hero relative pb-8">
+<div class="hero relative pb-8 animate-fade animate-duration">
   <figure class="relative inline-block overflow-hidden w-full">
     <img
-      src="hero.jpg"
+      src="/hero.jpg"
       alt="Industrial Products"
       class="block object-cover w-full h-screen -mt-20"
     />
   </figure>
 
   <div
-    class="hero-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-10 md:gap-16">
+    class="hero-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-10 md:gap-16 text-pretty">
     <div class="text-white text-center max-w-80 md:max-w-[700px]">
       <h2 class="text-4xl font-bold mb-8 md:text-8xl">
         <p>
@@ -31,14 +31,14 @@ import Button from "./Button.astro";
       class="hero-buttons flex flex-col md:flex-row gap-3 items-center justify-center">
       <Button
         className="btn-wsp"
-        src="whatsApp.svg"
+        src="/whatsApp.svg"
         alt="Icono de WhatsApp"
         contentText="Cotizar por Whatsapp"
       />
 
       <Button
         className="btn-email"
-        src="outlook.svg"
+        src="/outlook.svg"
         alt="Icono de Outlook"
         contentText="Cotizar por Email"
       />
