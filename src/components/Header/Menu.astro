@@ -1,5 +1,6 @@
 ---
-import { LINKS, PRODUCTS } from "../../services/products";
+import { links as LINKS } from "../../libs/links.json";
+import { products as PRODUCTS } from "../../libs/products.json";
 
 const CLASSLINKS_DEFAULT =
   "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:text-base hover:bg-clr-shadow";
@@ -28,7 +29,7 @@ const CLASSLINKS_DEFAULT =
               {PRODUCTS.map(product => (
                 <li class="submenu-item border-b w-full">
                   <a href="/" class={`${CLASSLINKS_DEFAULT} pl-8 block`}>
-                    {product.name}
+                    {product.category}
                   </a>
                 </li>
               ))}

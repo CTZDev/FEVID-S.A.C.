@@ -1,0 +1,18 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Input from "../../components/Input.astro";
+---
+
+<Layout
+  title="Catálogo de Productos nacionales e importados"
+  description="Las mejores marcas en productos industriales nacionales e importados a precios asequibles">
+  <main>
+    <Input
+      label="Buscar 🔎"
+      type="search"
+      key="txtSearch"
+      placeholder="Buscar producto..."
+    />
+    <slot name="product-cards" />
+  </main>
+</Layout>

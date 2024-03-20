@@ -1,6 +1,6 @@
 ---
 import HeaderSection from "../HeaderSection.astro";
-import { PRODUCTS } from "../../../services/products";
+import { products as PRODUCTS } from "../../../libs/products.json";
 import Card from "../../Main/Products/Card.astro";
 ---
 
@@ -16,7 +16,7 @@ import Card from "../../Main/Products/Card.astro";
       PRODUCTS.map((prod, i) => (
         <Card
           className={`card-${i + 1}`}
-          title={prod.name}
+          title={prod.category}
           src={prod.img}
           href={prod.url}
         />
