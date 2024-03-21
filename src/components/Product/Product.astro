@@ -1,3 +1,51 @@
 ---
-import { products as PRODUCTS } from "../../libs/products.json";
+interface Props {
+  title: string;
+  subtitle: string;
+}
+
+const { title, subtitle } = Astro.props;
 ---
+
+<section>
+  <header>
+    <h2>{title}</h2>
+    <h3>{subtitle}</h3>
+  </header>
+
+  <div class="cards grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3">
+    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 flex flex-col">
+      <div class="mb-4">
+        <span class="text-gray-700 text-lg mb-2">Single</span>
+        <p class="text-gray-600 text-base">
+          La solución ideal para principiantes
+        </p>
+      </div>
+      <div class="mb-2">
+        <span class="line-through text-gray-500">7.99 €</span>
+        <span class="text-green-500 ml-2">AHORRA 81%</span>
+      </div>
+      <div class="mb-4">
+        <span class="text-gray-700 text-xl">1,49 €/mes</span>
+        <p class="text-gray-600 text-sm">
+          *Con pedidos de 4.8 meses; IVA no incluido
+        </p>
+      </div>
+      <button
+        class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        type="button">
+        Añadir al carro
+      </button>
+      <div class="mt-4">
+        <h2 class="font-bold text-lg mb-2">Funciones principales</h2>
+        <ul class="list-disc list-inside text-gray-600">
+          <li>1 Sitio web Rendimiento estándar</li>
+          <li>50 GB de SSD Copias de seguridad semanales</li>
+          <li>1 cuenta de email SSL ilimitado gratis</li>
+          <li>100 GB de ancho de banda Dominio incluido (9.99 €)</li>
+          <li>CDN Gratis Dirección IP dedicada</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>

@@ -3,7 +3,7 @@
     {
       "category": "Productos eléctricos",
       "id": "electricos",
-      "url": "/",
+      "url": "/productos/electricos",
       "img": "/products/electricos.webp",
       "subcategories": [
         {
@@ -321,7 +321,7 @@
     {
       "category": "Energía Solar",
       "id": "energia-solar",
-      "url": "/",
+      "url": "/productos/energia-solar",
       "img": "/products/energia-solar.webp",
       "subcategories": [
         {
@@ -383,7 +383,7 @@
     {
       "category": "Cables eléctricos",
       "id": "cables-electricos",
-      "url": "/",
+      "url": "/productos/cables-electricos",
       "img": "/products/cables-electricos.webp",
       "subcategories": [
         {
@@ -433,7 +433,7 @@
     {
       "category": "Hidraúlicos",
       "id": "hidraulicos",
-      "url": "/",
+      "url": "/productos/hidraulicos",
       "img": "/products/hidraulico.webp",
       "subcategories": [
         {
@@ -470,7 +470,7 @@
     {
       "category": "Gasfitería - Agua",
       "id": "gasfiteria-agua",
-      "url": "/",
+      "url": "/productos/gasfiteria-agua",
       "img": "/products/gasfiteria-agua.webp",
       "subcategories": [
         {
@@ -520,7 +520,7 @@
     {
       "category": "Gasfitería Cocina - Baño",
       "id": "gasfiteria-cocina-baño",
-      "url": "/",
+      "url": "/productos/gasfiteria-cocina-baño",
       "img": "/products/gasfiteria-cocina-banio.webp",
       "subcategories": [
         {
@@ -562,7 +562,7 @@
     {
       "category": "Línea HDPE",
       "id": "linea-HDPE",
-      "url": "/",
+      "url": "/productos/linea-HDPE",
       "img": "/products/HDPE.webp",
       "subcategories": [
         {
@@ -625,7 +625,7 @@
     {
       "category": "Sopladores Regenerativos",
       "id": "sopladores-regenerativos",
-      "url": "/",
+      "url": "/productos/sopladores-regenerativos",
       "img": "/products/soplador-regenerativo.webp",
       "subcategories": [
         {
@@ -667,7 +667,7 @@
     {
       "category": "Automatización Industrial",
       "id": "automatizacion-industrial",
-      "url": "/",
+      "url": "/productos/automatizacion-industrial",
       "img": "/products/automatizacion-industrial.webp",
       "subcategories": [
         {
@@ -729,7 +729,7 @@
     {
       "category": "Instrumental de Nivel y Medición",
       "id": "instrumental-nivel-medicion",
-      "url": "/",
+      "url": "/productos/instrumental-nivel-medicion",
       "img": "/products/instrumental-nivel-medicion.webp",
       "subcategories": [
         {
@@ -778,7 +778,7 @@
     {
       "category": "Ferretería Industrial",
       "id": "ferreteria-industrial",
-      "url": "/",
+      "url": "/productos/ferreteria-industrial",
       "img": "/products/ferreteria-industrial.webp",
       "subcategories": [
         {
@@ -1057,7 +1057,7 @@
     {
       "category": "Productos Forestales",
       "id": "productos-forestales",
-      "url": "/",
+      "url": "/productos/productos-forestales",
       "img": "/products/productos-forestales.webp",
       "subcategories": [
         {
@@ -1107,7 +1107,7 @@
     {
       "category": "Implementos de Seguridad y Limpieza",
       "id": "implementos-seguridad-limpieza",
-      "url": "/",
+      "url": "/productos/implementos-seguridad-limpieza",
       "img": "/products/productos-seguridad.webp",
       "subcategories": [
         {
@@ -1163,7 +1163,7 @@
     {
       "category": "Papelería",
       "id": "papeleria",
-      "url": "/",
+      "url": "/productos/papeleria",
       "img": "/products/papeleria.webp",
       "subcategories": [
         {

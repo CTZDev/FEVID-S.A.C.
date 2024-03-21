@@ -1,0 +1,24 @@
+{
+  "links": [
+    {
+      "name": "Inicio",
+      "url": "/"
+    },
+    {
+      "name": "Productos",
+      "url": "/"
+    },
+    {
+      "name": "Nosotros",
+      "url": "/"
+    },
+    {
+      "name": "Marcas",
+      "url": "/"
+    },
+    {
+      "name": "Contáctanos",
+      "url": "/"
+    }
+  ]
+}

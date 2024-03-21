@@ -1,6 +1,6 @@
 ---
-import { links as LINKS } from "../../libs/links.json";
-import { products as PRODUCTS } from "../../libs/products.json";
+import { links as LINKS } from "../../config/links.json";
+import { products as PRODUCTS } from "../../config/products.json";
 
 const CLASSLINKS_DEFAULT =
   "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:text-base hover:bg-clr-shadow";
@@ -11,24 +11,26 @@ const CLASSLINKS_DEFAULT =
   {
     LINKS.map(link => (
       <li class="menu-item border-b w-full xl:border-0">
-        {link !== "Productos" ? (
-          <a href="/" class={`${CLASSLINKS_DEFAULT} block`}>
-            {link}
+        {link.name !== "Productos" ? (
+          <a href={link.url} class={`${CLASSLINKS_DEFAULT} block`}>
+            {link.name}
           </a>
         ) : (
           <span
             class={`${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold`}>
-            {link}
+            {link.name}
           </span>
         )}
 
         {
           /* This code is apply of products */
-          link === "Productos" && (
+          link.name === "Productos" && (
             <ul class="submenu last:border-b-0">
               {PRODUCTS.map(product => (
                 <li class="submenu-item border-b w-full">
-                  <a href="/" class={`${CLASSLINKS_DEFAULT} pl-8 block`}>
+                  <a
+                    href={product.url}
+                    class={`${CLASSLINKS_DEFAULT} pl-8 block`}>
                     {product.category}
                   </a>
                 </li>
@@ -159,13 +161,16 @@ const CLASSLINKS_DEFAULT =
   }
 </style>
 
-<script>
-  const menuHamburguer: HTMLElement | null =
-    document.querySelector(".menu-hamburguer");
-  const panelMenu: HTMLElement | null = document.querySelector(".menu");
-
-  document.addEventListener("click", (e: Event) => {
+<script type="module">
+  document.addEventListener("click", e => {
+    const menuHamburguer = document.querySelector(".menu-hamburguer");
+    const panelMenu = document.querySelector(".menu");
     const isEvent = e.target instanceof Element;
+
+    // Active Submenu elements
+    if (isEvent && e.target.matches(".menu-item > span")) {
+      e.target?.classList.toggle("is-active");
+    }
 
     // Add class "isActive" when clicking on Hamburguer
     if (e.target === menuHamburguer) {
@@ -180,12 +185,6 @@ const CLASSLINKS_DEFAULT =
     ) {
       panelMenu?.classList.remove("is-active");
       menuHamburguer?.classList.remove("is-active");
-    }
-
-    // Active Submenu elements
-    if (isEvent && e.target.matches(".menu-item > span")) {
-      e.target?.classList.toggle("is-active");
-      e.target.querySelector("::after")?.classList.toggle("is-active");
     }
   });
 </script>

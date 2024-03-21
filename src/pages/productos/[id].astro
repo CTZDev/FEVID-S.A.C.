@@ -1,0 +1,30 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import Input from "../../components/Input.astro";
+import Product from "../../components/Product/Product.astro";
+import { getAllProducts, getProductsBy } from "../../services/product";
+
+export function getStaticPaths() {
+  const getProducts = getAllProducts();
+  return getProducts.map(({ id }) => ({
+    params: { id },
+  }));
+}
+
+const { id } = Astro.params;
+const products = typeof id === "string" ? getProductsBy({ id }) : null;
+---
+
+<Layout
+  title=`CATEGORÍA: ${products?.category.toUpperCase()}`
+  description="Los mejores productos industriales nacionales e importados a precios asequibles">
+  <main>
+    <Input
+      label="Buscar producto"
+      type="search"
+      key="txtSearch"
+      placeholder="Buscar por característica del producto..."
+    />
+    <Product title="Categoria" subtitle="Subcategoria" />
+  </main>
+</Layout>
