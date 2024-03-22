@@ -1,7 +1,10 @@
 ---
 import Layout from "../../layouts/Layout.astro";
 import Input from "../../components/Input.astro";
+import Link from "../../components/Link.astro";
 import Product from "../../components/Product/Product.astro";
+import CardProduct from "../../components/Product/CardProduct.astro";
+import ListItemProduct from "../../components/Product/ListItemProduct.astro";
 import { getAllProducts, getProductsBy } from "../../services/product";
 
 export function getStaticPaths() {
@@ -19,12 +22,70 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
   title=`CATEGORÍA: ${products?.category.toUpperCase()}`
   description="Los mejores productos industriales nacionales e importados a precios asequibles">
   <main>
-    <Input
-      label="Buscar producto"
-      type="search"
-      key="txtSearch"
-      placeholder="Buscar por característica del producto..."
-    />
-    <Product title="Categoria" subtitle="Subcategoria" />
+    <Product title={`${products?.category.toUpperCase()}`}>
+      <div slot="product-content">
+        <Input
+          class:list={"py-4 max-w-[90rem] mx-auto text-sm md:text-base lg:text-lg"}
+          label="Buscar producto"
+          type="search"
+          key="txtSearch"
+          placeholder="Buscar por característica del producto..."
+        />
+
+        {
+          products?.subcategories.map(subcat => (
+            <>
+              <h3 class="text-xl font-bold border-b-2 pt-4 pb-1.5 mb-5 md:pt-12 md:pb-4 md:mb-8 md:text-xl lg:text-4xl">
+                📝 {subcat.subcategory}
+              </h3>
+
+              <div class="cards mb-12">
+                {subcat?.children?.map(child => (
+                  <CardProduct title={child.name} img={child.img}>
+                    <ul
+                      slot="card-details"
+                      class="text-gray-600 text-pretty mb-32">
+                      {child.listProducts?.map(list => (
+                        <ListItemProduct listDetail={list} />
+                      ))}
+                      <div class="absolute bottom-4 left-2/4 transform -translate-x-2/4 w-[90%] flex flex-col gap-2">
+                        <Link
+                          href="/"
+                          className="link-wsp text-white p-1.5 rounded-lg"
+                          src="/whatsApp.svg"
+                          alt={`Cotizar la categoria ${child.name} por WhatsApp`}
+                          contentText="Cotizar Por WhatsApp"
+                        />
+                        <Link
+                          href="/"
+                          className="link-email text-white p-1.5 rounded-lg"
+                          src="/outlook.svg"
+                          alt={`Cotizar la categoria ${child.name} por Email`}
+                          contentText="Cotizar Por Email"
+                        />
+                      </div>
+                    </ul>
+                  </CardProduct>
+                ))}
+              </div>
+            </>
+          ))
+        }
+      </div>
+    </Product>
   </main>
 </Layout>
+
+<style lang="scss">
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    gap: 1.1rem;
+  }
+
+  @media screen and (min-width: 768px) {
+    .cards {
+      grid-template-columns: repeat(auto-fill, minmax(20.25rem, 1fr));
+    }
+  }
+</style>

@@ -20,8 +20,10 @@ interface Props {
 const { label, type, key, placeholder } = Astro.props;
 ---
 
-<div class="mb-6">
-  <label class="block text-gray-700 font-bold mb-2 text-left" for={key}>
+<div {...Astro.props} class="mb-6">
+  <label
+    class="block text-base md:text-lg text-gray-700 font-bold mb-2 text-left"
+    for={key}>
     {label}
     {
       type !== "search" && (

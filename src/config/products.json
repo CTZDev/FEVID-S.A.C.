@@ -11,6 +11,7 @@
           "children": [
             {
               "name": "Reflectores LED",
+              "img": "/products-details/electricos/accesorios/reflectores-led.webp",
               "listProducts": [
                 "50 Watts",
                 "100 watts",
@@ -22,6 +23,7 @@
             },
             {
               "name": "Lámparas y Focos LED",
+              "img": "/products-details/electricos/accesorios/lamparas-focos-led.webp",
               "listProducts": [
                 "3 Watts",
                 "7 watts",
@@ -38,6 +40,7 @@
             },
             {
               "name": "Alumbrado Público",
+              "img": "/products-details/electricos/accesorios/alumbrado-publico.webp",
               "listProducts": [
                 "30 watts",
                 "60 watts",
@@ -51,14 +54,17 @@
             },
             {
               "name": "Abrazaderas para Pastorales",
+              "img": "/products-details/electricos/accesorios/abrazaderas-pastorales.webp",
               "listProducts": ["Simple", "Doble", "Triple", "Unifix"]
             },
             {
               "name": "Soldadura Exótérmica",
+              "img": "/products-details/electricos/accesorios/soldadura-exotermica.webp",
               "listProducts": ["Tenaza", "Chispero", "Masillas", "Cepillos"]
             },
             {
               "name": "Pararrayos Polimérico",
+              "img": "/products-details/electricos/accesorios/pararayos-polimerico.webp",
               "listProducts": [
                 "18Kv a 10Kv",
                 "21Kv a 10Kv",
@@ -72,6 +78,7 @@
             },
             {
               "name": "Pastorales",
+              "img": "/products-details/electricos/accesorios/pastorales.webp",
               "listProducts": [
                 "Tipo parabólico",
                 "Simple largo",
@@ -80,6 +87,7 @@
             },
             {
               "name": "Pararrayos Tetrapuntual",
+              "img": "/products-details/electricos/accesorios/pararayos-tetrapuntual.webp",
               "listProducts": [
                 "Pararrayos Tetrapuntual Tipo Franklin",
                 "Thor Tetrapuntual Tipo Franklin"
@@ -87,6 +95,7 @@
             },
             {
               "name": "Abrazaderas de Soporte para Tubería",
+              "img": "/products-details/electricos/accesorios/abrazaderas-soporte-tuberia.webp",
               "listProducts": [
                 "Doble Ala",
                 "Perpendicular Ajustable",
@@ -102,6 +111,7 @@
           "children": [
             {
               "name": "Caja de Registro",
+              "img": "/products-details/electricos/kit-pozos-tierra/caja-registro.webp",
               "listProducts": [
                 "Concreto Cuadrada",
                 "Concreto Redondo",
@@ -110,6 +120,7 @@
             },
             {
               "name": "Materiales",
+              "img": "/products-details/electricos/kit-pozos-tierra/materiales.webp",
               "listProducts": [
                 "Bentonita Sódica",
                 "Disagel",
@@ -125,6 +136,7 @@
             },
             {
               "name": "Accesorios",
+              "img": "/products-details/electricos/kit-pozos-tierra/accesorios.webp",
               "listProducts": [
                 "Split Bold",
                 "Conector Tipo G",
@@ -143,6 +155,7 @@
           "children": [
             {
               "name": "Tableros Metálicos",
+              "img": "/products-details/electricos/tableros-metalicos/tableros-metalicos.webp",
               "listProducts": [
                 "Tableros Adosados",
                 "Tableros Empotrados",
@@ -151,10 +164,12 @@
             },
             {
               "name": "Tableros PVC",
+              "img": "/products-details/electricos/tableros-metalicos/tableros-pvc.webp",
               "listProducts": ["Tableros Adosados", "Tableros Empotrados"]
             },
             {
               "name": "Manguera Corrugada",
+              "img": "/products-details/electricos/tableros-metalicos/manguera-corrugada.webp",
               "listProducts": [
                 "Para Ámbito Informático",
                 "Para Identificar una Emergencia",
@@ -166,6 +181,7 @@
             },
             {
               "name": "Cintas Aislantes y Vulcanizadas",
+              "img": "/products-details/electricos/tableros-metalicos/cinta-aislante-vulcanizada.webp",
               "listProducts": [
                 "Cinta Aislante Indeco",
                 "Cinta Aislante 3M",
@@ -182,6 +198,7 @@
           "children": [
             {
               "name": "Cajas de pase PVC I",
+              "img": "/products-details/electricos/instalacion-hogar/cajas-pase-pvc.webp",
               "listProducts": [
                 "Caja Estanca",
                 "Caja Rectangular",
@@ -191,6 +208,7 @@
             },
             {
               "name": "Cajas de pase PVC II",
+              "img": "/products-details/electricos/instalacion-hogar/cajas-pase-pvc-II.webp",
               "listProducts": [
                 "Caja Condulet Tipo C",
                 "Caja Condulet Tipo LR",
@@ -201,6 +219,7 @@
             },
             {
               "name": "Tapas ciegas PVC",
+              "img": "/products-details/electricos/instalacion-hogar/tapas-ciegas-pvc.webp",
               "listProducts": [
                 "Tapa Rectangular",
                 "Tapa Redonda",
@@ -211,6 +230,7 @@
             },
             {
               "name": "Accesorios PVC",
+              "img": "/products-details/electricos/instalacion-hogar/accesorios-pvc.webp",
               "listProducts": [
                 "Curva Sel x 5/8' -3/4' -1' -1(1/4)'-1(1/2)'-2'",
                 "Conector Sel x 5/8' -3/4' -1' -1(1/4)'-1(1/2)'-2'",
@@ -228,6 +248,7 @@
           "children": [
             {
               "name": "Accesorios de Metal",
+              "img": "/products-details/electricos/linea-industrial/accesorios-metal.webp",
               "listProducts": [
                 "Tubos Conduits",
                 "Abrazaderas Simples",
@@ -241,6 +262,7 @@
             },
             {
               "name": "Terminales",
+              "img": "/products-details/electricos/linea-industrial/terminales.webp",
               "listProducts": [
                 "Terminal Plano",
                 "Terminal Hembra",
@@ -255,6 +277,7 @@
             },
             {
               "name": "Tomacorriente y Enchufes Industriales",
+              "img": "/products-details/electricos/linea-industrial/tomacorriente-enchufes.webp",
               "listProducts": [
                 "Enchufe 16A 2P+T 250V",
                 "Enchufe 32A 3P+T 380 A 415V",
@@ -279,6 +302,7 @@
           "children": [
             {
               "name": "Tomas y Interruptores",
+              "img": "/products-details/electricos/linea-hogar/tomas-interruptores.webp",
               "listProducts": [
                 "Tomacorriente Simple, Doble, triple",
                 "Tomacorriente + Interruptor",
@@ -289,6 +313,7 @@
             },
             {
               "name": "Sockets",
+              "img": "/products-details/electricos/linea-hogar/sockets.webp",
               "listProducts": [
                 "Socket Oval",
                 "Socket Plano",
@@ -298,6 +323,7 @@
             },
             {
               "name": "Interruptores Termomagneticos",
+              "img": "/products-details/electricos/linea-hogar/interruptor-termomagnetico.webp",
               "listProducts": [
                 "Interruptores Termomagnéticos DX3-16 kA",
                 "Interruptores Termomagnéticos DX3-25 kA",
@@ -307,6 +333,7 @@
             },
             {
               "name": "Cable Extensión",
+              "img": "/products-details/electricos/linea-hogar/cable-extension.webp",
               "listProducts": [
                 "Extensión Eléctrica 3 salidas",
                 "Extensión Eléctrica 4 salidas",
@@ -329,6 +356,7 @@
           "children": [
             {
               "name": "Paneles Solares",
+              "img": "/products-details/energia-solar/paneles-solares.webp",
               "listProducts": [
                 "Panel Solar – Reflector 40W",
                 "Panel Solar – Policristalino 10W a 500W",
@@ -337,6 +365,7 @@
             },
             {
               "name": "Regulador PWM / Regulador MPPT (Parámetros Técnicos Reguladores)",
+              "img": "/products-details/energia-solar/reguladores.webp",
               "listProducts": [
                 "Regulador de Carga de 12-24V/10A",
                 "Regulador de Carga de 12-24V/12A",
@@ -348,6 +377,7 @@
             },
             {
               "name": "Parámetros Técnicos Inversores",
+              "img": "/products-details/energia-solar/parametros-inversores.webp",
               "listProducts": [
                 "Inversor 12/220V 300W - Media Onda",
                 "Inversor 12/220V 600W - Media Onda",
@@ -362,6 +392,7 @@
             },
             {
               "name": "Parámetros Técnicos - Baterías",
+              "img": "/products-details/energia-solar/parametros-baterias.webp",
               "listProducts": [
                 "Batería de 12V5AH",
                 "Batería de 12V7AH",
@@ -391,6 +422,7 @@
           "children": [
             {
               "name": "Cables de Alambre",
+              "img": "/products-details/cables-electricos/cables-alambre.webp",
               "listProducts": [
                 "Cable TW-80 Plus – 450/750V 10AWG",
                 "Cable TW-80 Plus – 450/750V 12AWG",
@@ -403,6 +435,7 @@
             },
             {
               "name": "Cables Monofásicos y Trifásicos",
+              "img": "/products-details/cables-electricos/monofasico-trifasico.webp",
               "listProducts": [
                 "Cable Vulcanizado – 2X12AWG",
                 "Cable Vulcanizado – 3X12AWG",
@@ -412,6 +445,7 @@
             },
             {
               "name": "Cables",
+              "img": "/products-details/cables-electricos/cables.webp",
               "listProducts": [
                 "Cable Concéntrico",
                 "Cable Autoportante 16/25/32MM"
@@ -419,6 +453,7 @@
             },
             {
               "name": "Cables de Soldar y Conectores",
+              "img": "/products-details/cables-electricos/cables-soldar-conectores.webp",
               "listProducts": [
                 "Cable de Soldar WS 1/0",
                 "Cable de Soldar WS 2/0",
@@ -441,12 +476,14 @@
           "children": [
             {
               "name": "Rodajes",
+              "img": "/products-details/hidraulico/rodajes.webp",
               "listProducts": [
                 "Rodamientos de Bolas de Ranura Profunda de todas las Medidas y Marcas."
               ]
             },
             {
               "name": "Adaptadores",
+              "img": "/products-details/hidraulico/adaptadores.webp",
               "listProducts": [
                 "Adaptadores Hidráulicos de Baja Presión",
                 "Adaptadores Hidráulicos de Alta Presión",
@@ -456,6 +493,7 @@
             },
             {
               "name": "Mangueras",
+              "img": "/products-details/hidraulico/mangueras.webp",
               "listProducts": [
                 "Mangueras Hidráulicas con 1 Malla",
                 "Mangueras Hidráulicas con 2 Mallas",
@@ -478,6 +516,7 @@
           "children": [
             {
               "name": "Valvula de Hierro Fundido, Bronce é Inoxidable",
+              "img": "/products-details/gasfiteria-agua/valvula-hierro-bronce.webp",
               "listProducts": [
                 "Válvulas Esféricas",
                 "Válvulas de Compuerta",
@@ -488,6 +527,7 @@
             },
             {
               "name": "Conexiones Soldables, Hierro Fundido, Bronce é Inoxidable",
+              "img": "/products-details/gasfiteria-agua/conexion-soldable.webp",
               "listProducts": [
                 "Codos",
                 "Bridas",
@@ -501,6 +541,7 @@
             },
             {
               "name": "Tuberías y Conexiones PVC",
+              "img": "/products-details/gasfiteria-agua/tuberias-conexiones-pvc.webp",
               "listProducts": [
                 "Válvulas",
                 "Codos",
@@ -528,6 +569,7 @@
           "children": [
             {
               "name": "Cocina y Accesorios",
+              "img": "/products-details/gasfiteria-cocina-banio/cocina-accesorios.webp",
               "listProducts": [
                 "Grifo Standard",
                 "Llaves para Lavadero",
@@ -538,6 +580,7 @@
             },
             {
               "name": "Baños y Accesorios",
+              "img": "/products-details/gasfiteria-cocina-banio/banios-accesorios.webp",
               "listProducts": [
                 "Grifos",
                 "Lavabo",
@@ -548,6 +591,7 @@
             },
             {
               "name": "Tubos y Accesorios",
+              "img": "/products-details/gasfiteria-cocina-banio/tubos-accesorios.webp",
               "listProducts": [
                 "Tubos PVC para Alcantarillado",
                 "Conexiones PVC para Alcantarillado",
@@ -570,6 +614,7 @@
           "children": [
             {
               "name": "Conexiones y Accesorios",
+              "img": "/products-details/linea-HDPE/conexiones-accesorios.webp",
               "listProducts": [
                 "Válvulas",
                 "Uniones",
@@ -584,6 +629,7 @@
             },
             {
               "name": "Mangueras/Mangas HDPE – NTP-ISO 4427-2008 PE 100",
+              "img": "/products-details/linea-HDPE/mangueras-mangas.webp",
               "listProducts": [
                 "Ø (mm) => 110  |  P.N. => 8,10,12.5,16  |  Medida Comercial => 4”  |  Espesor(mm) => 6.6  |  MT => 100",
                 "Ø (mm) => 90  |  P.N. => 8,10,12.5,16  |  Medida Comercial => 3”  |  Espesor(mm) => 5.4  |  MT => 100",
@@ -596,6 +642,7 @@
             },
             {
               "name": "Geomembranas, Espesor (mm)",
+              "img": "/products-details/linea-HDPE/geomembranas.webp",
               "listProducts": [
                 "0.50mm",
                 "0.75mm",
@@ -607,6 +654,7 @@
             },
             {
               "name": "Mangas (Medidas)",
+              "img": "/products-details/linea-HDPE/mangas.webp",
               "listProducts": [
                 "3.5” Tubo 2”",
                 "5.5” Tubo 3”",
@@ -633,6 +681,7 @@
           "children": [
             {
               "name": "Características",
+              "img": "/products-details/soplador-regenerativo/blower.webp",
               "listProducts": [
                 "Soplador regenerativo compacto y eficiente",
                 "Operación continua de bajo mantenimiento",
@@ -649,6 +698,7 @@
             },
             {
               "name": "Accesorios Blower",
+              "img": "/products-details/soplador-regenerativo/accesorios-blower.webp",
               "listProducts": [
                 "Válvulas de Seguridad Ajustable",
                 "Válvulas de Resorte",
@@ -675,6 +725,7 @@
           "children": [
             {
               "name": "Sensor de Nivel Ultrasónico",
+              "img": "/products-details/automatizacion-industrial/sensor-ultrasonico.webp",
               "listProducts": [
                 "Código => XX930A1A2M12  |  Parámetros técnicos => Sensor de Nivel Ultrasónico 4-20MA / 0-1MTR.",
                 "Código => XX930A3A2M12  |  Parámetros técnicos => Sensor de Nivel Ultrasónico O 4-20MA / 0-8MTR."
@@ -682,6 +733,7 @@
             },
             {
               "name": "Sensor de Presión",
+              "img": "/products-details/automatizacion-industrial/sensor-presion.webp",
               "listProducts": [
                 "Código => XMLK006B2C21  |  Parámetros técnicos => Sensor de Presión Analógico 0-6 BAR / 4-20mA + Conector",
                 "Código => XMLK010B2C21  |  Parámetros técnicos => Sensor de Presión Analógico 0-10 BAR / 4-20mA + Conector",
@@ -690,18 +742,21 @@
             },
             {
               "name": "Caudalímetros Electromagnéticos SIEMENS (SITRANS FM MAG 5000/MAG 6000/MAG6000 I)",
+              "img": "/products-details/automatizacion-industrial/caudalimetro.webp",
               "listProducts": [
                 "Sensor MAG 5100 W para Aplicaciones de Suministro de Agua y de Aguas Residuales"
               ]
             },
             {
               "name": "Caudalímetros Electromagnéticos SIEMENS (SITRANS MAG 8000/MAG 8000 CT)",
+              "img": "/products-details/automatizacion-industrial/caudalimetro-electromagnetico.webp",
               "listProducts": [
                 "Clase de Protección Anticorrosiva C4M para Tendido Subterráneo y Aplicaciones Sumergidas"
               ]
             },
             {
               "name": "Caudalímetros Vortex (Caudalímetro Magneto Inductivo SM6000)",
+              "img": "/products-details/automatizacion-industrial/caudalimetro-vortex-I.webp",
               "listProducts": [
                 "Medición precisa del caudal, del consumo y de la temperatura de los fluidos",
                 "Precisión, reproducibilidad y dinámica de medición elevadas",
@@ -713,6 +768,7 @@
             },
             {
               "name": "Caudalímetros Vortex (Caudalímetro Magneto Inductivo SM7000)",
+              "img": "/products-details/automatizacion-industrial/caudalimetro-vortex-II.webp",
               "listProducts": [
                 "Medición precisa del caudal, del consumo y de la temperatura de los fluidos",
                 "Precisión, reproducibilidad y dinámica de medición elevadas",
@@ -737,6 +793,7 @@
           "children": [
             {
               "name": "Línea Eléctrica (Instrumentos de medición y variables)",
+              "img": "/products-details/instrumental-nivel-medicion/linea-electrica.webp",
               "listProducts": [
                 "Amperímetro",
                 "Voltímetro",
@@ -748,6 +805,7 @@
             },
             {
               "name": "Instrumentos de precisión (Digitales y Analógicos)",
+              "img": "/products-details/instrumental-nivel-medicion/instrumentos-precision.webp",
               "listProducts": [
                 "Relojes Comparadores",
                 "Reloj Apalpador",
@@ -760,6 +818,7 @@
             },
             {
               "name": "Instrumentos de medición (Medición y Nivelación)",
+              "img": "/products-details/instrumental-nivel-medicion/instrumentos-medicion.webp",
               "listProducts": [
                 "Cinta Métrica 50mt. a +",
                 "Wincha 3-5-8-mt",
@@ -786,6 +845,7 @@
           "children": [
             {
               "name": "Tanques de Agua (Cisternas de 200Lt a 10,000Lt.)",
+              "img": "/products-details/ferreteria-industrial/tanque-agua.webp",
               "listProducts": [
                 "Biodigestores Autolimpiables",
                 "Cisternas Para Agua",
@@ -798,6 +858,7 @@
             },
             {
               "name": "Tanques de Agua (Accesorios)",
+              "img": "/products-details/ferreteria-industrial/tanque-agua-accesorios.webp",
               "listProducts": [
                 "Conexiones de Drenaje",
                 "Conexiones Hexagonal",
@@ -808,6 +869,7 @@
             },
             {
               "name": "Tanques de Agua (Bombas de 0.5HP a 3HP)",
+              "img": "/products-details/ferreteria-industrial/tanque-agua-bomba.webp",
               "listProducts": [
                 "Bombas Periféricas",
                 "Bombas Centrifugas",
@@ -823,6 +885,7 @@
           "children": [
             {
               "name": "Baterias",
+              "img": "/products-details/ferreteria-industrial/baterias.webp",
               "listProducts": [
                 "Cilindros => 3  |  Corriente (Amperios) => 150  |  CCA => 300",
                 "Cilindros => 4  |  Corriente (Amperios) => 200 - 300  |  CCA => 400 - 600",
@@ -834,6 +897,7 @@
             },
             {
               "name": "Motobombas - Motores (Gasolinero y Diesel 5.5HP a 23HP)",
+              "img": "/products-details/ferreteria-industrial/motobombas.webp",
               "listProducts": [
                 "Motobomba de Baja Presión",
                 "Motobomba de Alta Presión",
@@ -844,6 +908,7 @@
             },
             {
               "name": "Mangueras",
+              "img": "/products-details/ferreteria-industrial/mangueras.webp",
               "listProducts": [
                 "Mangueras de Succión Anillada",
                 "Mangueras de Descarga Tipo Manga"
@@ -856,6 +921,7 @@
           "children": [
             {
               "name": "Coberturas",
+              "img": "/products-details/ferreteria-industrial/cobertura.webp",
               "listProducts": [
                 "Fibraforte",
                 "Fibrocemento",
@@ -867,6 +933,7 @@
             },
             {
               "name": "Pernerìa (En todas las medidas)",
+              "img": "/products-details/ferreteria-industrial/perneria.webp",
               "listProducts": [
                 "Penos y Tuercas de Fierro Dulce",
                 "Penos y Tuercas de Grado",
@@ -882,6 +949,7 @@
             },
             {
               "name": "Aceros en Fierro dulce, Galvanizado, Inoxidable y Aluminio (en todas las medidas)",
+              "img": "/products-details/ferreteria-industrial/aceros-galvanizados.webp",
               "listProducts": [
                 "Planchas Lisas",
                 "Planchas Estriadas",
@@ -900,7 +968,8 @@
           "subcategory": "Soldadoras - Oxicorte - Consumibles",
           "children": [
             {
-              "name": "Máquinas del Solar",
+              "name": "Máquinas de Soldar",
+              "img": "/products-details/ferreteria-industrial/maquina-soldar.webp",
               "listProducts": [
                 "Maquinas Digitales y Analógicas",
                 "Tenazas de Soldar",
@@ -911,6 +980,7 @@
             },
             {
               "name": "Oxicorte",
+              "img": "/products-details/ferreteria-industrial/oxicorte.webp",
               "listProducts": [
                 "Maquinas Semiautomática de Corte",
                 "Soplete Oxicorte",
@@ -923,6 +993,7 @@
             },
             {
               "name": "Consumibles",
+              "img": "/products-details/ferreteria-industrial/consumibles.webp",
               "listProducts": [
                 "Electrodos",
                 "Alambre Solido y Tubular",
@@ -934,6 +1005,7 @@
         },
         {
           "subcategory": "Pinturas - Accesorios - Compresoras",
+          "img": "/products-details/ferreteria-industrial/pinturas.webp",
           "children": [
             {
               "name": "Pinturas para paredes, Estructuras metálicas y madera",
@@ -951,6 +1023,7 @@
             },
             {
               "name": "Consumibles",
+              "img": "/products-details/ferreteria-industrial/consumibles-pinturas.webp",
               "listProducts": [
                 "Brochas",
                 "Rodillos",
@@ -966,6 +1039,7 @@
             },
             {
               "name": "Equipos para pintado",
+              "img": "/products-details/ferreteria-industrial/equipos-pintado.webp",
               "listProducts": [
                 "Compresora Verticales",
                 "Compresora Móvil",
@@ -981,6 +1055,7 @@
           "children": [
             {
               "name": "Herramientas Industriales y para Bricolaje Electricos y Bateria",
+              "img": "/products-details/ferreteria-industrial/herramientas-industriales.webp",
               "listProducts": [
                 "Tronzadora",
                 "Sierra Circular",
@@ -994,6 +1069,7 @@
             },
             {
               "name": "Herramientas industriales y para bricolaje",
+              "img": "/products-details/ferreteria-industrial/herramientas-industriales-II.webp",
               "children": [
                 "Alicates",
                 "Pinzas",
@@ -1019,6 +1095,7 @@
           "children": [
             {
               "name": "Materiales de Construcción",
+              "img": "/products-details/ferreteria-industrial/materiales-construccion.webp",
               "listProducts": [
                 "Ladrillos",
                 "Cemento",
@@ -1038,6 +1115,7 @@
             },
             {
               "name": "Herramientas para Construcción",
+              "img": "/products-details/ferreteria-industrial/herramientas-construccion.webp",
               "listProducts": [
                 "Mezcladora de Cemento",
                 "Carretilla Buggy",
@@ -1065,6 +1143,8 @@
           "children": [
             {
               "name": "Productos Forestales",
+              "img": "/products-details/productos-forestales/productos-forestales.webp",
+
               "listProducts": [
                 "Palos y Postes de Eucalipto",
                 "Listones",
@@ -1079,6 +1159,7 @@
             },
             {
               "name": "Productos Agrícolas",
+              "img": "/products-details/productos-forestales/productos-agricolas.webp",
               "listProducts": [
                 "Insecticidas",
                 "Plaguicidas",
@@ -1092,6 +1173,7 @@
             },
             {
               "name": "Herramientas",
+              "img": "/products-details/productos-forestales/herramientas.webp",
               "listProducts": [
                 "Motofumigadoras",
                 "Mochila Fumigadora",
@@ -1115,6 +1197,7 @@
           "children": [
             {
               "name": "Implementos de Seguridad",
+              "img": "/products-details/implementos-seguridad-limpieza/implementos-seguridad.webp",
               "listProducts": [
                 "Cascos",
                 "Guantes",
@@ -1133,6 +1216,7 @@
             },
             {
               "name": "Implementos de Limpieza",
+              "img": "/products-details/implementos-seguridad-limpieza/implementos-limpieza.webp",
               "listProducts": [
                 "Escobas",
                 "Baldes",
@@ -1171,6 +1255,7 @@
           "children": [
             {
               "name": "Implementos de Oficina",
+              "img": "/products-details/papeleria/implementos-oficina.webp",
               "listProducts": [
                 "Cuadernos",
                 "Papel Bond",
@@ -1187,6 +1272,7 @@
             },
             {
               "name": "Agua de Mesa",
+              "img": "/products-details/papeleria/agua-mesa.webp",
               "listProducts": ["Cajas de Agua de Mesa Sin Gas de 20 Litros"]
             }
           ]

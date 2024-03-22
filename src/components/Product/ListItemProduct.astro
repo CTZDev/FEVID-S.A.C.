@@ -1,0 +1,12 @@
+---
+interface Props {
+  listDetail: string;
+}
+
+const { listDetail } = Astro.props;
+---
+
+<li class="flex gap-2.5 pb-1.5">
+  <img src="/check.svg" alt={listDetail} class="self-start" />
+  {listDetail}
+</li>

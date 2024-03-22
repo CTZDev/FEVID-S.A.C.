@@ -1,27 +1,28 @@
 ---
 interface Props {
+  href?: string;
   className?: string;
   src: string;
   alt: string;
   contentText: string;
 }
 
-const { className, src, alt, contentText } = Astro.props;
+const { href, className, src, alt, contentText } = Astro.props;
 ---
 
-<button
-  type="button"
-  class={`${className} btn flex items-center gap-3 min-w-60 border-none rounded-full py-2 text-white text-sm font-semibold transition-all md:justify-center md:text-base md:min-w-72`}>
-  <img src={src} alt={alt} width="36" height="36" class="ml-5 md:ml-0" />
+<a
+  href={href}
+  class={`${className} link flex items-center gap-3 text-sm font-semibold transition-all md:text-base`}>
+  <img src={src} alt={alt} width="32" height="32" class="ml-5 md:ml-0" />
   <span>{contentText}</span>
-</button>
+</a>
 
 <style lang="scss">
-  .btn:hover {
-    transform: scale(1.025) translateY(-1px);
+  .link:hover {
+    transform: scale(1.02) translateY(-1px);
   }
 
-  .btn {
+  .link {
     &-wsp {
       background-color: rgba(29, 167, 82, 1);
       &:hover {
