@@ -12,7 +12,7 @@ const { href, className, src, alt, contentText } = Astro.props;
 
 <a
   href={href}
-  class={`${className} link flex items-center gap-3 text-sm font-semibold transition-all md:text-base`}>
+  class={`${className} link flex items-center gap-3 text-sm font-semibold transition-all cursor-pointer md:text-base`}>
   <img src={src} alt={alt} width="32" height="32" class="ml-5 md:ml-0" />
   <span>{contentText}</span>
 </a>
@@ -24,16 +24,16 @@ const { href, className, src, alt, contentText } = Astro.props;
 
   .link {
     &-wsp {
-      background-color: rgba(29, 167, 82, 1);
+      background-color: rgba(21, 131, 63, 1);
       &:hover {
-        background-color: rgba(29, 167, 82, 0.9);
+        background-color: rgba(21, 131, 63, 0.9);
       }
     }
 
     &-email {
-      background-color: rgb(42, 111, 168);
+      background-color: rgba(35, 100, 153, 1);
       &:hover {
-        background-color: rgba(42, 111, 168, 0.9);
+        background-color: rgba(35, 100, 153, 0.9);
       }
     }
 

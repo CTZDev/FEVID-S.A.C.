@@ -12,10 +12,10 @@ const { title, src, href, className } = Astro.props;
 <div
   class=`${className} border border-gray-200 rounded-xl shadow-md overflow-hidden relative`>
   <figure class="card-header">
-    <img src={src} alt={title} loading="lazy" width="100%" class="h-52" />
+    <img src={src} alt={title} loading="lazy" width="100%" class="max-h-52" />
   </figure>
   <div class="card-body px-4 pt-5 pb-20">
-    <h5 class="text-xl font-bold tracking-tight">{title}</h5>
+    <h4 class="text-xl font-bold tracking-tight">{title}</h4>
     <a
       href={href}
       class="inline-flex items-center justify-center w-full py-2.5 text-base font-medium text-center rounded-lg">

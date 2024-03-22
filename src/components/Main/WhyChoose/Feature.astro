@@ -1,13 +1,13 @@
 ---
 interface Props {
   title: string;
-  src: string;
-  alt: string;
+  source: string;
+  message: string;
   className: string;
   contentText: string;
 }
 
-const { title, src, alt, className, contentText } = Astro.props;
+const { title, source, message, className, contentText } = Astro.props;
 ---
 
 <article
@@ -18,7 +18,10 @@ const { title, src, alt, className, contentText } = Astro.props;
     </h3>
   </header>
   <div class="content">
-    <img src={src} alt={alt} width="120" height="120" class="m-auto" />
+    <video width="120" height="120" autoplay loop muted class="mx-auto">
+      <source src={source} type="video/webm" />
+      {message}
+    </video>
     <p>
       {contentText}
     </p>
