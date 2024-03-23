@@ -1005,10 +1005,10 @@
         },
         {
           "subcategory": "Pinturas - Accesorios - Compresoras",
-          "img": "/products-details/ferreteria-industrial/pinturas.webp",
           "children": [
             {
               "name": "Pinturas para paredes, Estructuras metálicas y madera",
+              "img": "/products-details/ferreteria-industrial/pinturas.webp",
               "listProducts": [
                 "Pintura Base",
                 "Pintura de Acabados",
@@ -1070,7 +1070,7 @@
             {
               "name": "Herramientas industriales y para bricolaje",
               "img": "/products-details/ferreteria-industrial/herramientas-industriales-II.webp",
-              "children": [
+              "listProducts": [
                 "Alicates",
                 "Pinzas",
                 "Llave Inglesa",

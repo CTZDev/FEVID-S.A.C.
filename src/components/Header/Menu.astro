@@ -17,7 +17,7 @@ const CLASSLINKS_DEFAULT =
           </a>
         ) : (
           <span
-            class={`${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold`}>
+            class={`item-link ${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold`}>
             {link.name}
           </span>
         )}
@@ -74,7 +74,7 @@ const CLASSLINKS_DEFAULT =
       overflow: visible;
 
       &-item > a,
-      &-item > span {
+      &-item > .item-link {
         font-weight: 500;
         border-bottom: 3px solid transparent;
         transition: all 250ms ease-in-out;
@@ -102,7 +102,7 @@ const CLASSLINKS_DEFAULT =
         }
       }
 
-      &-item > span:hover::before {
+      &-item > .item-link:hover::before {
         width: calc(100% + 25px);
       }
     }
@@ -126,11 +126,11 @@ const CLASSLINKS_DEFAULT =
     }
 
     // Active button of list the products
-    .menu-item > span {
+    .menu-item > .item-link {
       margin-right: 1rem;
     }
 
-    .menu-item > span::after {
+    .menu-item > .item-link::after {
       content: "";
       position: absolute;
       top: 50%;
@@ -144,16 +144,16 @@ const CLASSLINKS_DEFAULT =
       transition: transform 250ms ease-in-out;
     }
 
-    .menu-item > span.is-active::after {
+    .menu-item > .item-link.is-active::after {
       transform: translateY(calc(-50% - 0.05rem)) rotate(180deg);
     }
 
-    .menu-item > span.is-active::before {
+    .menu-item > .item-link.is-active::before {
       width: calc(100% + 25px);
       box-shadow: 1px 1px 2px #ffbf60;
     }
 
-    .menu-item > span.is-active ~ .submenu {
+    .menu-item > .item-link.is-active ~ .submenu {
       max-height: 1200px;
       visibility: visible;
       opacity: 1;
@@ -168,7 +168,7 @@ const CLASSLINKS_DEFAULT =
     const isEvent = e.target instanceof Element;
 
     // Active Submenu elements
-    if (isEvent && e.target.matches(".menu-item > span")) {
+    if (isEvent && e.target.matches(".menu-item > .item-link")) {
       e.target?.classList.toggle("is-active");
     }
 
