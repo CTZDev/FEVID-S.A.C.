@@ -607,7 +607,7 @@
       "category": "Línea HDPE",
       "id": "linea-HDPE",
       "url": "/productos/linea-HDPE",
-      "img": "/products/HDPE.webp",
+      "img": "/products/linea-HDPE.webp",
       "subcategories": [
         {
           "subcategory": "Geomembrana - Accesorios",
@@ -1190,7 +1190,7 @@
       "category": "Implementos de Seguridad y Limpieza",
       "id": "implementos-seguridad-limpieza",
       "url": "/productos/implementos-seguridad-limpieza",
-      "img": "/products/productos-seguridad.webp",
+      "img": "/products/implementos-seguridad-limpieza.webp",
       "subcategories": [
         {
           "subcategory": "EPPS - Productos de Limpieza",
