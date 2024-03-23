@@ -10,15 +10,15 @@
     },
     {
       "name": "Nosotros",
-      "url": "/"
+      "url": "/#about-me"
     },
     {
       "name": "Marcas",
-      "url": "/"
+      "url": "/#brands"
     },
     {
       "name": "Contáctanos",
-      "url": "/"
+      "url": "/#contact-us"
     }
   ]
 }
