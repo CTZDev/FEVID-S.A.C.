@@ -506,17 +506,17 @@
       ]
     },
     {
-      "category": "Gasfitería - Agua",
-      "id": "gasfiteria-agua",
-      "url": "/productos/gasfiteria-agua",
-      "img": "/products/gasfiteria-agua.webp",
+      "category": "Válvulas, Tuberías y Accesorios",
+      "id": "valvulas-tuberias-accesorios",
+      "url": "/productos/valvulas-tuberias-accesorios",
+      "img": "/products/valvulas-tuberias-accesorios.webp",
       "subcategories": [
         {
-          "subcategory": "Válvulas - Accesorios",
+          "subcategory": "Válvulas, Tuberías y Accesorios",
           "children": [
             {
               "name": "Valvula de Hierro Fundido, Bronce é Inoxidable",
-              "img": "/products-details/gasfiteria-agua/valvula-hierro-bronce.webp",
+              "img": "/products-details/valvulas-tuberias-accesorios/valvula-hierro-bronce.webp",
               "listProducts": [
                 "Válvulas Esféricas",
                 "Válvulas de Compuerta",
@@ -527,7 +527,7 @@
             },
             {
               "name": "Conexiones Soldables, Hierro Fundido, Bronce é Inoxidable",
-              "img": "/products-details/gasfiteria-agua/conexion-soldable.webp",
+              "img": "/products-details/valvulas-tuberias-accesorios/conexion-soldable.webp",
               "listProducts": [
                 "Codos",
                 "Bridas",
@@ -541,7 +541,7 @@
             },
             {
               "name": "Tuberías y Conexiones PVC",
-              "img": "/products-details/gasfiteria-agua/tuberias-conexiones-pvc.webp",
+              "img": "/products-details/valvulas-tuberias-accesorios/tuberias-conexiones-pvc.webp",
               "listProducts": [
                 "Válvulas",
                 "Codos",
