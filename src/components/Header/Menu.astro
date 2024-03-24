@@ -3,7 +3,7 @@ import { links as LINKS } from "../../config/links.json";
 import { products as PRODUCTS } from "../../config/products.json";
 
 const CLASSLINKS_DEFAULT =
-  "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:text-base hover:bg-clr-shadow";
+  "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:bg-clr-shadow";
 ---
 
 <ul
@@ -100,6 +100,10 @@ const CLASSLINKS_DEFAULT =
           width: 100%;
           box-shadow: 1px 1px 2px #ffbf60;
         }
+      }
+
+      &-item > .item-link:hover::before {
+        width: calc(100% + 25px);
       }
     }
 

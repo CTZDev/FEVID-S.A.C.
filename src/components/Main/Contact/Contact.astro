@@ -48,19 +48,17 @@ import HeaderContact from "./HeaderContact.astro";
       <button
         type="submit"
         class="btn-form justify-center py-3 flex items-center gap-3 text-sm font-semibold transition-all cursor-pointer w-full md:text-base lg:text-lg">
-        <img src="/send.svg" alt="Send form" width="32" height="32" />Enviar
-        Formulario
+        <img src="/send.svg" alt="Send form" width="32" height="32" />
+        Enviar Formulario
       </button>
 
       <input
         type="hidden"
         name="_next"
-        value="http://localhost:4321/contact-response"
+        value="http://localhost:4321/contact-response/"
       />
-
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
-
       <!-- <input
         type="hidden"
         name="_cc"
