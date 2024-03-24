@@ -1,0 +1,32 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout
+  title="Solicitud enviada correctamente"
+  description=`Envío de datos personales para el adjunto de información detallada de productos`>
+  <div class="container-response text-center">
+    <h2
+      class="font-bold text-base pt-32 pb-10 text-pretty md:text-lg lg:text-6xl">
+      GRACIAS POR CONFIAR EN NOSOTROS
+    </h2>
+    <p
+      class="w-[900px] mx-auto leading-7 py-20 text-sm md:text-base lg:text-2xl">
+      En breve nos pondremos en contacto con usted y le brindaremos mayor
+      información de nuestro catálogo de productos y los servicios que
+      ofrecemos. Todo esto será enviado a su bandeja de entrada del correo
+      electrónico registrado en nuestro formulario.
+    </p>
+    <a
+      href="/"
+      class="block mb-8 text-base md:text-base lg:text-xl font-semibold transition-all text-clr-primary hover:text-clr-dark-primary">
+      🚀 Siéntase libre y siga navegando!! 🚀
+    </a>
+  </div>
+</Layout>
+
+<style>
+  .container-response {
+    min-height: calc(100vh - 614px);
+  }
+</style>

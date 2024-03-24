@@ -1,17 +1,19 @@
 ---
 interface Props {
   href?: string;
+  target?: string;
   className?: string;
   src: string;
   alt: string;
   contentText: string;
 }
 
-const { href, className, src, alt, contentText } = Astro.props;
+const { href, target, className, src, alt, contentText } = Astro.props;
 ---
 
 <a
   href={href}
+  target={target}
   class={`${className} link flex items-center gap-3 text-sm font-semibold transition-all cursor-pointer md:text-base`}>
   <img src={src} alt={alt} width="32" height="32" class="ml-5 md:ml-0" />
   <span>{contentText}</span>
