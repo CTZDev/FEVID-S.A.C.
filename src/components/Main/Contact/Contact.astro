@@ -21,7 +21,7 @@ import HeaderContact from "./HeaderContact.astro";
     />
 
     <form
-      action="https://formsubmit.co/carlosteranzavaleta@hotmail.com"
+      action="https://formsubmit.co/6dad4f8dbc4453249d6b737cb803839a"
       method="POST"
       target="_blank"
       class="form-body text-sm md:text-base lg:text-lg">
@@ -72,15 +72,12 @@ import HeaderContact from "./HeaderContact.astro";
 </section>
 
 <style lang="scss">
-  .btn-form:hover {
-    transform: scale(1.02) translateY(-1px);
-  }
-
   .btn-form {
     border-radius: 8px;
     color: black;
     background-color: rgba(255, 191, 96, 1);
     &:hover {
+      transform: scale(1.02);
       background-color: rgba(255, 191, 96, 0.8);
     }
   }
@@ -168,7 +165,6 @@ import HeaderContact from "./HeaderContact.astro";
     setTimeout(() => {
       $loader?.classList.add("hidden");
       ($form as HTMLFormElement).reset();
-      scrollTo(0, 0);
-    }, 12000);
+    }, 10000);
   });
 </script>
