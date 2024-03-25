@@ -1,16 +1,11 @@
 ---
 import Link from "./Link.astro";
+import Modal from "./Modal.astro";
 ---
 
 <div class="hero relative pb-8 animate-fade animate-duration">
   <figure class="relative inline-block overflow-hidden w-full">
-    <img
-      src="/hero.webp"
-      alt="Industrial Products"
-      loading="lazy"
-      width="100%"
-      class="block object-cover h-screen -mt-20"
-    />
+    <img src="/hero.webp" alt="Industrial Products" loading="lazy" width="100%" class="block object-cover h-screen -mt-20" />
   </figure>
 
   <div
@@ -22,15 +17,12 @@ import Link from "./Link.astro";
         </p>
       </h2>
       <p class="text-base font-semibold md:text-xl lg:text-2xl">
-        Venta al por mayor y menor de todo tipo de productos industriales, como:
-        Productos eléctricos y gasfíteria, estructuras metálicas, EPP's,
-        materiales de construcción, productos forestales, proveeduría,
-        ferretería en general, servicios, entre otros.
+        Venta al por mayor y menor de todo tipo de productos industriales, como: Productos eléctricos y gasfíteria, estructuras metálicas,
+        EPP's, materiales de construcción, productos forestales, proveeduría, ferretería en general, servicios, entre otros.
       </p>
     </div>
 
-    <div
-      class="hero-buttons flex flex-col md:flex-row gap-3 items-center justify-center">
+    <div class="hero-buttons flex flex-col md:flex-row gap-3 items-center justify-center">
       <Link
         href={`https://wa.me/51948575179?text=Hola, Quisiera obtener mayor información del catálogo de sus productos (nacionales e importados)`}
         target="_blank"
@@ -40,13 +32,17 @@ import Link from "./Link.astro";
         contentText="Cotizar por Whatsapp"
       />
 
+      <!-- These two components are related (Link and Modal) -->
       <Link
         href="mailto:carlosteranzavaleta@hotmail.com?subject=Solicitud%20de%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20productos&body=Hola%2C%20Quisiera%20obtener%20mayor%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20sus%20productos%20(nacionales%20e%20importados)"
         className="link-email border-none rounded-full py-2 text-white min-w-60 md:justify-center md:min-w-72"
         src="/outlook.svg"
         alt="Icono de Outlook"
         contentText="Cotizar por Email"
+        onclick="modalButton.showModal()"
       />
+
+      <Modal id="modalButton" />
     </div>
   </div>
 </div>

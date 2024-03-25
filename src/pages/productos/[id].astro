@@ -35,16 +35,14 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
         {
           products?.subcategories.map(subcat => (
             <>
-              <h3 class="text-xl font-bold border-b-2 pt-4 pb-1.5 mb-5 md:pt-12 md:pb-4 md:mb-8 md:text-xl lg:text-4xl">
+              <h3 class="cards-title text-xl font-bold border-b-2 pt-4 pb-1.5 mb-5 md:pt-12 md:pb-4 md:mb-8 md:text-xl lg:text-4xl">
                 📝 {subcat.subcategory}
               </h3>
 
               <div class="cards mb-12">
                 {subcat?.children?.map(child => (
                   <CardProduct title={child.name} img={child.img}>
-                    <ul
-                      slot="card-details"
-                      class="text-gray-600 text-pretty mb-32">
+                    <ul slot="card-details" class="text-gray-600 text-pretty mb-32">
                       {child.listProducts?.map(list => (
                         <ListItemProduct listDetail={list} />
                       ))}
@@ -57,13 +55,18 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
                           alt={`Cotizar la categoria ${child.name} por WhatsApp`}
                           contentText="Cotizar Por WhatsApp"
                         />
-                        <Link
-                          href="/"
-                          className="link-email text-white p-1.5 rounded-lg"
-                          src="/outlook.svg"
-                          alt={`Cotizar la categoria ${child.name} por Email`}
-                          contentText="Cotizar Por Email"
-                        />
+                        <a
+                          href={
+                            "mailto:carlosteranzavaleta@hotmail.com?subject=Solicitud de información de la categoría de Productos: " +
+                            products.category.toUpperCase() +
+                            "&body=Hola quisiera obtener mayor información de los siguientes productos: " +
+                            child.name.toUpperCase() +
+                            " de la categoría de " +
+                            products.category.toUpperCase()
+                          }
+                          class="link-email text-white p-1.5 rounded-lg bg-red-500">
+                          Cotizar Por Email
+                        </a>
                       </div>
                     </ul>
                   </CardProduct>
@@ -90,3 +93,18 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
     }
   }
 </style>
+
+<script>
+  const $txtSearch = document.getElementById("txtSearch") as HTMLInputElement | null;
+  const $cardsTitle = document.querySelector(".cards-title") as HTMLElement | null;
+  const $cards = document.querySelector(".cards") as HTMLElement | null;
+
+  document.addEventListener("keyup", (e: Event) => {
+    const isEvent = e.target instanceof Element;
+
+    if (e.target === $txtSearch) {
+      console.log($txtSearch?.value);
+      const value = $txtSearch?.value;
+    }
+  });
+</script>

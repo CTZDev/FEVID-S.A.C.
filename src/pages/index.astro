@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Hero from "../components/Hero.astro";
 import Main from "../components/Main/Main.astro";
 import Dial from "../components/Dial.astro";
+import Modal from "../components/Modal.astro";
 ---
 
 <Layout
@@ -23,11 +24,16 @@ import Dial from "../components/Dial.astro";
     classImg="w-16 h-16 lg:w-[74px] lg:h-[74px] drop-shadow-[1px_1px_2px_#1da752e6]"
   />
 
+  <!-- These two components are related (Dial and Modal) -->
   <Dial
-    href="mailto:carlosteranzavaleta@hotmail.com?subject=Solicitud%20de%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20productos&body=Hola%2C%20Quisiera%20obtener%20mayor%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20sus%20productos%20(nacionales%20e%20importados)"
+    href="mailto:carlosteranzavaleta@hotmail.com?subject=Solicitud de información del catálogo de productos&body=Hola, Quisiera obtener mayor información del catálogo de productos (nacionales e importados)"
+    target="_blank"
     src="/message.svg"
     alt="Botón interactivo con hotmail y gmail"
     classPosition="bottom-6 right-3 md:right-6 lg:right-10 rounded-full bg-blue-800 p-4"
     classImg="w-10 h-10 lg:w-[50px] lg:h-[50px] drop-shadow-[1px_1px_2px_#2a6fa8e6]"
+    onclick="modalIcon.showModal()"
   />
+
+  <Modal id="modalIcon" />
 </Layout>

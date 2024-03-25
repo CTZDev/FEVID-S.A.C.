@@ -1,0 +1,23 @@
+---
+interface Props {
+  id: string;
+}
+
+const { id } = Astro.props;
+---
+
+<dialog id={id} class="max-w-[600px]">
+  <div class="modal-box px-6 py-8">
+    <h3 class="font-bold text-lg">COTIZACIÓN POR EMAIL</h3>
+    <p class="py-5">
+      Envia la información que necesitas a nuestro correo corporativo y nos pondremos en comunicación con usted en breve.
+      <strong>GRACIAS POR SU CONFIANZA</strong>
+    </p>
+    <div class="modal-action">
+      <form method="dialog" class="flex justify-end">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="px-4 py-2 text-center font-bold bg-red-500 text-white">Cerrar</button>
+      </form>
+    </div>
+  </div>
+</dialog>
