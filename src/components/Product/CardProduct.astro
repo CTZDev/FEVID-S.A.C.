@@ -1,14 +1,14 @@
 ---
 interface Props {
   img?: string;
+  className?: string;
   title: string;
 }
 
-const { img, title } = Astro.props;
+const { img, title, className } = Astro.props;
 ---
 
-<div
-  class="bg-white shadow-md border rounded px-4 py-6 flex flex-col gap-4 overflow-hidden relative">
+<div class={`${className} bg-white shadow-md border rounded px-4 py-6 flex flex-col gap-4 overflow-hidden relative`}>
   <div class="card-product-header py-4">
     <img src={img} alt={title} width="100%" class="h-32" />
   </div>

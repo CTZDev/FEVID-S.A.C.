@@ -2,6 +2,8 @@
 import Layout from "../../layouts/Layout.astro";
 import Input from "../../components/Input.astro";
 import Link from "../../components/Link.astro";
+import Modal from "../../components/Modal.astro";
+import Dial from "../../components/Dial.astro";
 import Product from "../../components/Product/Product.astro";
 import CardProduct from "../../components/Product/CardProduct.astro";
 import ListItemProduct from "../../components/Product/ListItemProduct.astro";
@@ -22,7 +24,7 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
   title=`CATEGORÍA: ${products?.category.toUpperCase()}`
   description="Los mejores productos industriales nacionales e importados a precios asequibles">
   <main>
-    <Product title={`${products?.category.toUpperCase()}`}>
+    <Product title={`${products?.category.toUpperCase()}`} className="cards-header">
       <div slot="product-content">
         <Input
           class:list={"py-4 max-w-[90rem] mx-auto text-sm md:text-base lg:text-lg"}
@@ -41,7 +43,7 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
 
               <div class="cards mb-12">
                 {subcat?.children?.map(child => (
-                  <CardProduct title={child.name} img={child.img}>
+                  <CardProduct title={child.name} img={child.img} className="card-product">
                     <ul slot="card-details" class="text-gray-600 text-pretty mb-32">
                       {child.listProducts?.map(list => (
                         <ListItemProduct listDetail={list} />
@@ -55,18 +57,15 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
                           alt={`Cotizar la categoria ${child.name} por WhatsApp`}
                           contentText="Cotizar Por WhatsApp"
                         />
-                        <a
-                          href={
-                            "mailto:carlosteranzavaleta@hotmail.com?subject=Solicitud de información de la categoría de Productos: " +
-                            products.category.toUpperCase() +
-                            "&body=Hola quisiera obtener mayor información de los siguientes productos: " +
-                            child.name.toUpperCase() +
-                            " de la categoría de " +
-                            products.category.toUpperCase()
-                          }
-                          class="link-email text-white p-1.5 rounded-lg bg-red-500">
-                          Cotizar Por Email
-                        </a>
+
+                        <Link
+                          href={`mailto:carlosteranzavaleta@hotmail.com?subject=Solicitud%20de%20informaci%C3%B3n%20de%20la%20categor%C3%ADa%20%3A%20${decodeURIComponent(products.category.toUpperCase())}%20&body=Producto%3A%20${decodeURIComponent(child.name)}%20%2F%2F%20Necesito%20Informaci%C3%B3n%20detallada`}
+                          className="link-email text-white p-1.5 rounded-lg"
+                          src="/outlook.svg"
+                          alt="Icono de Outlook"
+                          contentText="Cotizar por Email"
+                          onclick="modalButton.showModal()"
+                        />
                       </div>
                     </ul>
                   </CardProduct>
@@ -77,6 +76,10 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
         }
       </div>
     </Product>
+    <Modal
+      id="modalButton"
+      text="Envia detalladamente las especificaciones que requieres, de tu producto seleccionado a nuestros correos corporativos"
+    />
   </main>
 </Layout>
 
@@ -95,16 +98,14 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
 </style>
 
 <script>
-  const $txtSearch = document.getElementById("txtSearch") as HTMLInputElement | null;
-  const $cardsTitle = document.querySelector(".cards-title") as HTMLElement | null;
-  const $cards = document.querySelector(".cards") as HTMLElement | null;
+  const $txtSearch = document.getElementById("txtSearch");
 
-  document.addEventListener("keyup", (e: Event) => {
-    const isEvent = e.target instanceof Element;
+  // document.addEventListener("keyup", (e: Event) => {
+  //   const isEvent = e.target instanceof Element;
 
-    if (e.target === $txtSearch) {
-      console.log($txtSearch?.value);
-      const value = $txtSearch?.value;
-    }
-  });
+  //   if (e.target === $txtSearch) {
+  //     console.log($txtSearch?.value);
+  //     const value = $txtSearch?.value;
+  //   }
+  // });
 </script>
