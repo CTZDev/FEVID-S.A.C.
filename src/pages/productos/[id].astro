@@ -3,11 +3,11 @@ import Layout from "../../layouts/Layout.astro";
 import Input from "../../components/Input.astro";
 import Link from "../../components/Link.astro";
 import Modal from "../../components/Modal.astro";
-import Dial from "../../components/Dial.astro";
 import Product from "../../components/Product/Product.astro";
 import CardProduct from "../../components/Product/CardProduct.astro";
 import ListItemProduct from "../../components/Product/ListItemProduct.astro";
 import { getAllProducts, getProductsBy } from "../../services/product";
+import Brochure from "../../components/Brochure.astro";
 
 export function getStaticPaths() {
   const getProducts = getAllProducts();
@@ -23,21 +23,15 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
 <Layout
   title=`CATEGORÍA: ${products?.category.toUpperCase()}`
   description="Los mejores productos industriales nacionales e importados a precios asequibles">
-  <main>
+  <div>
     <Product title={`${products?.category.toUpperCase()}`} className="cards-header">
       <div slot="product-content">
-        <Input
-          class:list={"py-4 max-w-[90rem] mx-auto text-sm md:text-base lg:text-lg mb-10"}
-          label="Buscar especificación"
-          type="search"
-          key="txtSearch"
-          placeholder="Buscar por característica del producto..."
-        />
+        <Input label="Buscar especificación" type="search" className="btnSearch" placeholder="Buscar por característica del producto..." />
 
         {
           products?.subcategories.map((subcat) => (
-            <section class="container-cards mb-16">
-              <h3 class="cards-title text-xl font-bold border-b-2 pb-1.5 mb-5 md:pb-4 md:mb-8 md:text-xl lg:text-4xl">📝 {subcat.subcategory}</h3>
+            <section class="container-cards">
+              <h3 class="cards-title text-xl font-bold border-b-2 pb-1.5 my-5 md:pb-4 md:mt-12 md:text-xl lg:text-4xl">📝 {subcat.subcategory}</h3>
               <div class="cards mb-6">
                 {subcat?.children?.map((child) => (
                   <CardProduct title={child.name} img={child.img} className="card-product">
@@ -77,7 +71,9 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
       id="modalButton"
       text="Envia detalladamente las especificaciones que requieres de tu producto seleccionado a nuestros correos corporativos"
     />
-  </main>
+
+    <Brochure className="mt-3 mb-12" />
+  </div>
 </Layout>
 
 <style lang="scss">
@@ -95,24 +91,23 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
 </style>
 
 <script>
-  const $txtSearch = document.getElementById("txtSearch") as HTMLInputElement | null;
-  const $cards = Array.from(document.querySelectorAll(".card-product"));
-
-  document.addEventListener("keyup", (e) => {
+  document.addEventListener("input", (e) => {
+    const $cards = Array.from(document.querySelectorAll(".card-product"));
     const isEvent = e.target instanceof Element;
 
-    if (isEvent && e.target === $txtSearch) {
-      const $valueInput = $txtSearch?.value.toLowerCase().trim();
+    if (isEvent && e.target.matches(".btnSearch")) {
+      const $valueInput = (e.target as HTMLInputElement)?.value.toLowerCase().trim();
 
       $cards.map(($card) => {
         const $title = $card.querySelector(".card-product-body > h4");
         const titleText = $title?.textContent?.toLowerCase().trim();
         const $containerCards = $card.closest(".cards");
+        const $containerGlobalCards = $card.closest(".container-cards");
         const $titleCategory = $containerCards?.previousElementSibling;
 
         const isMatch = Array.from($card.querySelectorAll(".card-product-body > ul > li")).some(($cardBody) => {
           const bodyText = $cardBody?.textContent?.toLowerCase().trim();
-          return titleText?.includes($valueInput) || bodyText?.includes($valueInput);
+          if ($valueInput !== undefined) return titleText?.includes($valueInput) || bodyText?.includes($valueInput);
         });
 
         isMatch ? $card.classList.remove("hidden") : $card.classList.add("hidden");
@@ -122,8 +117,13 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
             card_prod.classList.contains("hidden")
           );
 
-          if (isAllHidden) $titleCategory?.classList.add("hidden");
-          else $titleCategory?.classList.remove("hidden");
+          if (isAllHidden) {
+            $titleCategory?.classList.add("hidden");
+            $containerGlobalCards?.classList.add("hidden");
+          } else {
+            $titleCategory?.classList.remove("hidden");
+            $containerGlobalCards?.classList.remove("hidden");
+          }
         }
       });
     }

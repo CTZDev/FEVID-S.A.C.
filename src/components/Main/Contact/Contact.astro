@@ -11,8 +11,7 @@ import HeaderContact from "./HeaderContact.astro";
     contentText=`"Ingresa tu solicitud y procederemos a brindarle más detalles del catálogo de nuestros productos"`
   />
 
-  <div
-    class="bg-white rounded-lg shadow-2xl px-6 py-8 max-w-[768px] m-auto flex flex-col gap-6 lg:max-w-[1024px] lg:px-12 lg:py-12 mb-32">
+  <div class="bg-white rounded-lg shadow-2xl px-6 py-8 max-w-[768px] m-auto flex flex-col gap-6 lg:max-w-[1024px] lg:px-12 lg:py-12 mb-32">
     <HeaderContact
       title="RELLENA EL FORMULARIO"
       text=`“Una vez que tu mensaje sea enviado, será recibido con prioridad por
@@ -25,25 +24,11 @@ import HeaderContact from "./HeaderContact.astro";
       method="POST"
       target="_blank"
       class="form-body text-sm md:text-base lg:text-lg">
-      <Input
-        label="Nombres completos"
-        key="fullName"
-        type="text"
-        placeholder="Escribe tus nombres completos"
-      />
+      <Input label="Nombres completos" key="fullName" type="text" placeholder="Escribe tus nombres completos" />
 
-      <Input
-        label="Correo electrónico"
-        key="email"
-        type="email"
-        placeholder="Digita tu correo electrónico"
-      />
+      <Input label="Correo electrónico" key="email" type="email" placeholder="Digita tu correo electrónico" />
 
-      <TextArea
-        label="Mensaje"
-        key="send"
-        placeholder="Ingresa los productos que necesitas cotizar y obtener información"
-      />
+      <TextArea label="Mensaje" key="send" placeholder="Ingresa los productos que necesitas cotizar y obtener información" />
 
       <button
         type="submit"
@@ -52,11 +37,7 @@ import HeaderContact from "./HeaderContact.astro";
         Enviar Formulario
       </button>
 
-      <input
-        type="hidden"
-        name="_next"
-        value="http://localhost:4321/contact-response/"
-      />
+      <input type="hidden" name="_next" value="http://localhost:4321/respuesta-contactar/" />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
       <!-- <input
@@ -158,7 +139,7 @@ import HeaderContact from "./HeaderContact.astro";
   const $loader = document.querySelector(".loader");
 
   // Cargar el submit
-  $form?.addEventListener("submit", e => {
+  $form?.addEventListener("submit", (e) => {
     $loader?.classList.remove("hidden");
     setTimeout(() => {
       $loader?.classList.add("hidden");

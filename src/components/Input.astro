@@ -4,20 +4,21 @@ type InputType = "text" | "password" | "email" | "number" | "date" | "color" | "
 interface Props {
   label: string;
   type: InputType;
-  key: string;
+  key?: string;
+  className?: string;
   placeholder: string;
 }
 
-const { label, type, key, placeholder } = Astro.props;
+const { label, type, key, className, placeholder } = Astro.props;
 ---
 
-<div {...Astro.props} class="mb-6">
+<div>
   <label class="block text-base md:text-lg text-gray-700 font-bold mb-2 text-left" for={key}>
     {label}
     {type !== "search" && <span class="text-red-500 font-bold text-base pl-0.5">*</span>}
   </label>
   <input
-    class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-ellipsis"
+    class={`${className} shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-ellipsis`}
     type={type}
     id={key}
     name={key}
