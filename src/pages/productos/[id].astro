@@ -27,25 +27,22 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
     <Product title={`${products?.category.toUpperCase()}`} className="cards-header">
       <div slot="product-content">
         <Input
-          class:list={"py-4 max-w-[90rem] mx-auto text-sm md:text-base lg:text-lg"}
-          label="Buscar producto"
+          class:list={"py-4 max-w-[90rem] mx-auto text-sm md:text-base lg:text-lg mb-10"}
+          label="Buscar especificación"
           type="search"
           key="txtSearch"
           placeholder="Buscar por característica del producto..."
         />
 
         {
-          products?.subcategories.map(subcat => (
-            <>
-              <h3 class="cards-title text-xl font-bold border-b-2 pt-4 pb-1.5 mb-5 md:pt-12 md:pb-4 md:mb-8 md:text-xl lg:text-4xl">
-                📝 {subcat.subcategory}
-              </h3>
-
-              <div class="cards mb-12">
-                {subcat?.children?.map(child => (
+          products?.subcategories.map((subcat) => (
+            <section class="container-cards mb-16">
+              <h3 class="cards-title text-xl font-bold border-b-2 pb-1.5 mb-5 md:pb-4 md:mb-8 md:text-xl lg:text-4xl">📝 {subcat.subcategory}</h3>
+              <div class="cards mb-6">
+                {subcat?.children?.map((child) => (
                   <CardProduct title={child.name} img={child.img} className="card-product">
                     <ul slot="card-details" class="text-gray-600 text-pretty mb-32">
-                      {child.listProducts?.map(list => (
+                      {child.listProducts?.map((list) => (
                         <ListItemProduct listDetail={list} />
                       ))}
                       <div class="absolute bottom-4 left-2/4 transform -translate-x-2/4 w-[90%] flex flex-col gap-2">
@@ -71,14 +68,14 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
                   </CardProduct>
                 ))}
               </div>
-            </>
+            </section>
           ))
         }
       </div>
     </Product>
     <Modal
       id="modalButton"
-      text="Envia detalladamente las especificaciones que requieres, de tu producto seleccionado a nuestros correos corporativos"
+      text="Envia detalladamente las especificaciones que requieres de tu producto seleccionado a nuestros correos corporativos"
     />
   </main>
 </Layout>
@@ -98,14 +95,37 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
 </style>
 
 <script>
-  const $txtSearch = document.getElementById("txtSearch");
+  const $txtSearch = document.getElementById("txtSearch") as HTMLInputElement | null;
+  const $cards = Array.from(document.querySelectorAll(".card-product"));
 
-  // document.addEventListener("keyup", (e: Event) => {
-  //   const isEvent = e.target instanceof Element;
+  document.addEventListener("keyup", (e) => {
+    const isEvent = e.target instanceof Element;
 
-  //   if (e.target === $txtSearch) {
-  //     console.log($txtSearch?.value);
-  //     const value = $txtSearch?.value;
-  //   }
-  // });
+    if (isEvent && e.target === $txtSearch) {
+      const $valueInput = $txtSearch?.value.toLowerCase().trim();
+
+      $cards.map(($card) => {
+        const $title = $card.querySelector(".card-product-body > h4");
+        const titleText = $title?.textContent?.toLowerCase().trim();
+        const $containerCards = $card.closest(".cards");
+        const $titleCategory = $containerCards?.previousElementSibling;
+
+        const isMatch = Array.from($card.querySelectorAll(".card-product-body > ul > li")).some(($cardBody) => {
+          const bodyText = $cardBody?.textContent?.toLowerCase().trim();
+          return titleText?.includes($valueInput) || bodyText?.includes($valueInput);
+        });
+
+        isMatch ? $card.classList.remove("hidden") : $card.classList.add("hidden");
+
+        if ($containerCards) {
+          const isAllHidden = Array.from($containerCards.querySelectorAll(".card-product")).every((card_prod) =>
+            card_prod.classList.contains("hidden")
+          );
+
+          if (isAllHidden) $titleCategory?.classList.add("hidden");
+          else $titleCategory?.classList.remove("hidden");
+        }
+      });
+    }
+  });
 </script>

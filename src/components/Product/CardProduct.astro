@@ -8,7 +8,7 @@ interface Props {
 const { img, title, className } = Astro.props;
 ---
 
-<div class={`${className} bg-white shadow-md border rounded px-4 py-6 flex flex-col gap-4 overflow-hidden relative`}>
+<article class={`${className} bg-white shadow-md border rounded px-4 py-6 flex flex-col gap-4 overflow-hidden relative`}>
   <div class="card-product-header py-4">
     <img src={img} alt={title} width="100%" class="h-32" />
   </div>
@@ -16,4 +16,10 @@ const { img, title, className } = Astro.props;
     <h4 class="text-lg font-bold pb-3">{title}</h4>
     <slot name="card-details" />
   </div>
-</div>
+</article>
+
+<style>
+  .card-hidden {
+    border: 1px solid red;
+  }
+</style>
