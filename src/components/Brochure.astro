@@ -9,7 +9,7 @@ const { className } = Astro.props;
 <a
   href="/brochure-fevid.pdf"
   target="_blank"
-  class={`max-w-[90rem] mx-auto flex gap-3 justify-center items-center py-3 mt-20 border font-bold text-lg bg-red-600/85 text-white rounded-lg shadow-xl hover:bg-red-600/80 md:text-2xl ${className}`}>
+  class={`brochure max-w-[90rem] mx-auto flex gap-3 justify-center items-center py-3 mt-20 border font-bold text-lg bg-red-600/85 text-white rounded-lg shadow-xl hover:bg-red-600/80 md:text-2xl ${className}`}>
   <img src="/pdf.svg" alt="Descargar Brochure en PDF" width="40" height="40" />
   Descargar Brochure
 </a>
@@ -24,3 +24,13 @@ const { className } = Astro.props;
     transform: scale(1.01);
   }
 </style>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+
+  ScrollReveal().reveal(".brochure", {
+    distance: "500px",
+    duration: 900,
+    easing: "ease-in-out",
+  });
+</script>
