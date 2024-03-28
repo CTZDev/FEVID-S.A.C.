@@ -2,35 +2,35 @@
 import { links as LINKS } from "../../config/links.json";
 import { products as PRODUCTS } from "../../config/products.json";
 
-const CLASSLINKS_DEFAULT =
-  "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:bg-clr-shadow";
+const CLASSLINKS_DEFAULT = "block p-3 cursor-pointer transition-all text-clr-dark hover:font-bold hover:bg-clr-shadow";
 ---
 
 <ul
   class="menu flex justify-center items-center flex-col overflow-hidden absolute top-full left-0 right-0 transition-all bg-white">
   {
-    LINKS.map(link => (
+    LINKS.map((link) => (
       <li class="menu-item border-b w-full xl:border-0">
         {link.name !== "Productos" ? (
           <a href={link.url} class={`${CLASSLINKS_DEFAULT} block`}>
             {link.name}
           </a>
         ) : (
-          <span
-            class={`item-link ${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold`}>
-            {link.name}
-          </span>
+          <span class={`item-link ${CLASSLINKS_DEFAULT} bg-clr-shadow text-base font-bold`}>{link.name}</span>
         )}
 
         {
           /* This code is apply of products */
           link.name === "Productos" && (
             <ul class="submenu last:border-b-0">
-              {PRODUCTS.map(product => (
+              <li class="submenu-item border-b w-full">
+                <a href="/productos/todos" class={`${CLASSLINKS_DEFAULT} pl-8 block`}>
+                  Buscar producto en específico{" "}
+                </a>
+              </li>
+
+              {PRODUCTS.map((product) => (
                 <li class="submenu-item border-b w-full">
-                  <a
-                    href={product.url}
-                    class={`${CLASSLINKS_DEFAULT} pl-8 block`}>
+                  <a href={product.url} class={`${CLASSLINKS_DEFAULT} pl-8 block`}>
                     {product.category}
                   </a>
                 </li>
@@ -162,7 +162,7 @@ const CLASSLINKS_DEFAULT =
 </style>
 
 <script type="module">
-  document.addEventListener("click", e => {
+  document.addEventListener("click", (e) => {
     const menuHamburguer = document.querySelector(".menu-hamburguer");
     const panelMenu = document.querySelector(".menu");
     const isEvent = e.target instanceof Element;
@@ -179,10 +179,7 @@ const CLASSLINKS_DEFAULT =
     }
 
     // Remove class "isActive" of the Panel and menuHamburguer
-    if (
-      (isEvent && e.target.matches(".menu-item")) ||
-      (isEvent && e.target.matches(".submenu-item"))
-    ) {
+    if ((isEvent && e.target.matches(".menu-item")) || (isEvent && e.target.matches(".submenu-item"))) {
       panelMenu?.classList.remove("is-active");
       menuHamburguer?.classList.remove("is-active");
     }

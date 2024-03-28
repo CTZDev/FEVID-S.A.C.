@@ -1,12 +1,15 @@
 ---
 interface Props {
   className?: string;
+  scrollRevealActive?: boolean;
 }
 
-const { className } = Astro.props;
+const { className, scrollRevealActive = true } = Astro.props;
 ---
 
-<div class={`banner flex items-center justify-center flex-wrap gap-8 p-8 rounded-2xl border ${className}`}>
+<div
+  class={`banner flex items-center justify-center flex-wrap gap-8 p-8 rounded-2xl border ${className}`}
+  data-scroll-reveal-active={scrollRevealActive}>
   <video width="500" height="auto" autoplay loop muted class="shadow-lg rounded-xl">
     <source src="/delivery.webm" type="video/webm" />
   </video>
@@ -28,9 +31,14 @@ const { className } = Astro.props;
 <script>
   import ScrollReveal from "scrollreveal";
 
-  ScrollReveal().reveal(".banner", {
-    distance: "500px",
-    duration: 900,
-    easing: "ease-in-out",
-  });
+  const bannerElement = document.querySelector(".banner");
+  const scrollRevealActive = (bannerElement as HTMLElement)?.dataset?.scrollRevealActive;
+
+  if (scrollRevealActive !== "false") {
+    ScrollReveal().reveal(".banner", {
+      distance: "500px",
+      duration: 900,
+      easing: "ease-in-out",
+    });
+  }
 </script>
