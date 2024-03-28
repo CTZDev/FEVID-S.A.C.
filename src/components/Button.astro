@@ -1,0 +1,27 @@
+---
+interface Props {
+  src: string;
+  alt: string;
+}
+
+const { src, alt } = Astro.props;
+---
+
+<button
+  type="submit"
+  class="btn-form justify-center py-3 flex items-center gap-3 text-sm font-semibold transition-all cursor-pointer w-full md:text-base lg:text-lg">
+  <img src={src} alt={alt} width="32" height="32" />
+  <slot name="text-content" />
+</button>
+
+<style lang="scss">
+  .btn-form {
+    border-radius: 8px;
+    color: black;
+    background-color: rgba(255, 191, 96, 1);
+    &:hover {
+      transform: scale(1.02);
+      background-color: rgba(255, 191, 96, 0.8);
+    }
+  }
+</style>

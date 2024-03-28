@@ -7,15 +7,16 @@ interface Props {
   key?: string;
   className?: string;
   placeholder: string;
+  isRequired?: boolean;
 }
 
-const { label, type, key, className, placeholder } = Astro.props;
+const { label, type, key, className, placeholder, isRequired = true } = Astro.props;
 ---
 
 <div>
   <label class="block text-base md:text-lg text-gray-700 font-bold mb-2 text-left" for={key}>
     {label}
-    {type !== "search" && <span class="text-red-500 font-bold text-base pl-0.5">*</span>}
+    {isRequired && <span class="text-red-500 font-bold text-base pl-0.5">*</span>}
   </label>
   <input
     class={`${className} shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-ellipsis`}

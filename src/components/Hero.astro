@@ -5,10 +5,17 @@ import Modal from "./Modal.astro";
 
 <div class="hero relative pb-8 animate-fade animate-duration">
   <figure class="relative inline-block overflow-hidden w-full">
-    <img src="/hero.webp" alt="Industrial Products" loading="lazy" width="100%" class="block object-cover h-screen -mt-20" />
+    <img
+      src="/hero.webp"
+      alt="Industrial Products"
+      loading="lazy"
+      width="100%"
+      class="block object-cover h-screen -mt-20"
+    />
   </figure>
 
-  <div class="hero-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-10 md:gap-16 text-pretty">
+  <div
+    class="hero-content absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex flex-col gap-10 md:gap-16 text-pretty">
     <div class="text-white text-center max-w-80 md:max-w-[700px]">
       <h2 class="text-4xl font-bold mb-8 md:text-8xl">
         <p>
@@ -16,12 +23,13 @@ import Modal from "./Modal.astro";
         </p>
       </h2>
       <p class="text-base font-semibold md:text-xl lg:text-2xl">
-        Venta al por mayor y menor de todo tipo de productos industriales, como: Productos eléctricos y gasfíteria, estructuras metálicas, EPP's,
-        materiales de construcción, productos forestales, proveeduría, ferretería en general, servicios, entre otros.
+        Venta al por mayor y menor de todo tipo de productos industriales, como: Productos eléctricos y gasfíteria,
+        estructuras metálicas, EPP's, materiales de construcción, productos forestales, proveeduría, ferretería en
+        general, servicios, entre otros.
       </p>
     </div>
 
-    <div class="hero-buttons flex flex-col md:flex-row gap-3 items-center justify-center">
+    <div class="hero-links flex flex-col md:flex-row gap-3 items-center justify-center">
       <Link
         href={`https://wa.me/51923157617?text=Hola, Quisiera obtener mayor información del catálogo de sus productos (Nacionales e Importados)`}
         target="_blank"
@@ -38,11 +46,11 @@ import Modal from "./Modal.astro";
         src="/email.svg"
         alt="Icono de Outlook"
         contentText="Cotizar por Email"
-        onclick="modalButtonHero.showModal()"
+        onclick="modalLinkHero.showModal()"
       />
 
       <Modal
-        id="modalButtonHero"
+        id="modalLinkHero"
         text="Envia la información que necesitas a nuestros correos corporativos y nos pondremos en comunicación con usted en breve."
       />
     </div>

@@ -3,6 +3,7 @@ import HeaderSection from "../HeaderSection.astro";
 import Input from "../../Input.astro";
 import TextArea from "../../TextArea.astro";
 import HeaderContact from "./HeaderContact.astro";
+import Button from "../../Button.astro";
 ---
 
 <section class="contact-main" id="contact-us">
@@ -11,7 +12,8 @@ import HeaderContact from "./HeaderContact.astro";
     contentText=`"Ingresa tu solicitud y procederemos a brindarle más detalles del catálogo de nuestros productos"`
   />
 
-  <div class="bg-white rounded-lg shadow-2xl px-6 py-8 max-w-[768px] m-auto flex flex-col gap-6 lg:max-w-[1024px] lg:px-12 lg:py-12 mb-32">
+  <div
+    class="bg-white rounded-lg shadow-2xl px-6 py-8 max-w-[768px] m-auto flex flex-col gap-6 lg:max-w-[1024px] lg:px-12 lg:py-12 mb-32">
     <HeaderContact
       title="RELLENA EL FORMULARIO"
       text=`“Una vez que tu mensaje sea enviado, será recibido con prioridad por
@@ -20,47 +22,60 @@ import HeaderContact from "./HeaderContact.astro";
     />
 
     <form
-      action="https://formsubmit.co/6dad4f8dbc4453249d6b737cb803839a"
+      action="https://formsubmit.co/fevidsac@gmail.com"
       method="POST"
       target="_blank"
-      class="form-body text-sm md:text-base lg:text-lg">
-      <Input label="Nombres completos" key="fullName" type="text" placeholder="Escribe tus nombres completos" />
+      class="form-body text-sm md:text-base lg:text-lg flex flex-col gap-4">
+      <Input
+        label="Nombres completos"
+        key="fullName"
+        type="text"
+        placeholder="Ingresa tus nombres completos"
+        isRequired
+      />
 
-      <Input label="Correo electrónico" key="email" type="email" placeholder="Digita tu correo electrónico" />
+      <Input
+        label="Razón Social"
+        key="companyName"
+        type="text"
+        placeholder="Ingresa tu razón social"
+        isRequired={false}
+      />
 
-      <TextArea label="Mensaje" key="send" placeholder="Ingresa los productos que necesitas cotizar y obtener información" />
+      <Input label="RUC" key="ruc" type="number" placeholder="Ingresa el RUC de tu organización" isRequired={false} />
 
-      <button
-        type="submit"
-        class="btn-form justify-center py-3 flex items-center gap-3 text-sm font-semibold transition-all cursor-pointer w-full md:text-base lg:text-lg">
-        <img src="/send.svg" alt="Send form" width="32" height="32" />
-        Enviar Formulario
-      </button>
+      <Input
+        label="Teléfono o celular"
+        key="phone"
+        type="number"
+        placeholder="Ingresa tu teléfono o celular"
+        isRequired
+      />
 
+      <Input label="Correo electrónico" key="email" type="email" placeholder="Ingresa tu correo electrónico" />
+
+      <TextArea
+        label="Mensaje"
+        key="send"
+        placeholder="Ingresa los productos que necesitas cotizar y obtener información"
+      />
+
+      <Button src="/send.svg" alt="Send form" slot="text-content">
+        <span slot="text-content">Enviar formulario</span>
+      </Button>
+
+      <!-- Properties of the formsubmit.co -->
       <input type="hidden" name="_next" value="http://localhost:4321/respuesta-contactar/" />
+      <input type="hidden" name="_subject" value="Información del catálogo de productos" />
       <input type="hidden" name="_captcha" value="false" />
       <input type="hidden" name="_template" value="table" />
-      <!-- <input
-        type="hidden"
-        name="_cc"
-        value="fevidsac@hotmail.com, fevidsac@gmail.com"
-      /> -->
+      <input type="hidden" name="_cc" value="fevidsac@hotmail.com" />
       <div class="loader hidden"></div>
     </form>
   </div>
 </section>
 
 <style lang="scss">
-  .btn-form {
-    border-radius: 8px;
-    color: black;
-    background-color: rgba(255, 191, 96, 1);
-    &:hover {
-      transform: scale(1.02);
-      background-color: rgba(255, 191, 96, 0.8);
-    }
-  }
-
   .loader {
     width: 48px;
     height: 48px;

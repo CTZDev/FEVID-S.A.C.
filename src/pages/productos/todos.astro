@@ -24,6 +24,7 @@ const products = getAllProducts();
           type="search"
           className="btnSearch"
           placeholder="Buscar por característica del producto..."
+          isRequired={false}
         />
 
         {
@@ -60,7 +61,7 @@ const products = getAllProducts();
                               src="/email.svg"
                               alt="Icono de Outlook"
                               contentText="Cotizar por Email"
-                              onclick="modalButton.showModal()"
+                              onclick="modalLinkTodos.showModal()"
                             />
                           </div>
                         </ul>
@@ -75,7 +76,7 @@ const products = getAllProducts();
       </div>
     </Product>
     <Modal
-      id="modalButton"
+      id="modalLinkTodos"
       text="Envia detalladamente las especificaciones que requieres de tu producto seleccionado a nuestros correos corporativos"
     />
 
