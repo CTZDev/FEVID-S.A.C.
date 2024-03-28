@@ -8,6 +8,7 @@ import CardProduct from "../../components/Product/CardProduct.astro";
 import ListItemProduct from "../../components/Product/ListItemProduct.astro";
 import { getAllProducts, getProductsBy } from "../../services/product";
 import Brochure from "../../components/Brochure.astro";
+import Banner from "../../components/Banner.astro";
 
 export function getStaticPaths() {
   const getProducts = getAllProducts();
@@ -72,7 +73,8 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
       text="Envia detalladamente las especificaciones que requieres de tu producto seleccionado a nuestros correos corporativos"
     />
 
-    <Brochure className="mt-3 mb-12" />
+    <Brochure className="mt-6" />
+    <Banner className="my-12 max-w-[90rem] mx-auto" />
   </div>
 </Layout>
 

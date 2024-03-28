@@ -1,0 +1,36 @@
+---
+interface Props {
+  className?: string;
+}
+
+const { className } = Astro.props;
+---
+
+<div class={`banner flex items-center justify-center flex-wrap gap-8 p-8 rounded-2xl border ${className}`}>
+  <video width="500" height="auto" autoplay loop muted class="shadow-lg rounded-xl">
+    <source src="/delivery.webm" type="video/webm" />
+  </video>
+  <div class="content flex flex-col items-center gap-6 m-auto">
+    <p class="font-bold text-lg md:text-2xl xl:text-4xl">¡Hacemos envíos a nivel nacional!</p>
+    <img src="/bandera-peru.webp" alt="Envíos a nivel nacional" width="200" height="200" />
+  </div>
+</div>
+
+<style>
+  .banner {
+    /* border: 2px solid rgba(0, 0, 0, 0.1); */
+    box-shadow:
+      -2px 2px 10px #ebebeb,
+      2px -2px 10px #ebebeb;
+  }
+</style>
+
+<script>
+  import ScrollReveal from "scrollreveal";
+
+  ScrollReveal().reveal(".banner", {
+    distance: "500px",
+    duration: 900,
+    easing: "ease-in-out",
+  });
+</script>

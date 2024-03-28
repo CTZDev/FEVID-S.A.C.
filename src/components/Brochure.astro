@@ -9,19 +9,16 @@ const { className } = Astro.props;
 <a
   href="/brochure-fevid.pdf"
   target="_blank"
-  class={`brochure max-w-[90rem] mx-auto flex gap-3 justify-center items-center py-3 mt-20 border font-bold text-lg bg-red-600/85 text-white rounded-lg shadow-xl hover:bg-red-600/80 md:text-2xl ${className}`}>
+  class={`brochure max-w-[90rem] mx-auto flex gap-3 justify-center items-center py-3 border font-bold text-lg hover:text-[19px] bg-red-600/85 text-white rounded-lg shadow-xl hover:bg-red-600/75 md:text-2xl hover:md:text-[25px]
+  ${className}`}>
   <img src="/pdf.svg" alt="Descargar Brochure en PDF" width="40" height="40" />
   Descargar Brochure
 </a>
 
 <style>
-  a {
+  .brochure {
     text-transform: uppercase;
-    transition: all 0.4s ease-in-out;
-  }
-
-  a:hover {
-    transform: scale(1.01);
+    transition: all 300ms ease-in-out;
   }
 </style>
 

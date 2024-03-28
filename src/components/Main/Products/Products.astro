@@ -2,7 +2,6 @@
 import HeaderSection from "../HeaderSection.astro";
 import { products as PRODUCTS } from "../../../config/products.json";
 import Card from "../../Main/Products/Card.astro";
-import Brochure from "../../Brochure.astro";
 ---
 
 <section class="products">
@@ -15,8 +14,6 @@ import Brochure from "../../Brochure.astro";
   <div class="cards mb-12">
     {PRODUCTS.map((prod, i) => <Card className={`card-${i + 1}`} title={prod.category} src={prod.img} href={prod.url} />)}
   </div>
-
-  <Brochure />
 </section>
 
 <style>
