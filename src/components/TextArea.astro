@@ -2,13 +2,15 @@
 interface Props {
   label: string;
   key: string;
+  title: string;
   placeholder: string;
+  dataPattern?: string;
 }
 
-const { label, key, placeholder } = Astro.props;
+const { label, key, title, placeholder, dataPattern } = Astro.props;
 ---
 
-<div class="mb-6">
+<>
   <label class="block text-gray-700 font-bold mb-2 text-left" for={key}>
     {label}
     <span class="text-red-500 font-bold text-base pl-0.5">*</span>
@@ -17,13 +19,15 @@ const { label, key, placeholder } = Astro.props;
   <textarea
     rows="5"
     cols="20"
-    class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+    class="shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight resize-none focus:outline-none focus:shadow-outline"
     id={key}
     name={key}
+    title={title}
     placeholder={placeholder}
+    data-pattern={dataPattern}
     required>
   </textarea>
-</div>
+</>
 
 <script>
   const $textarea = document.querySelector("textarea");

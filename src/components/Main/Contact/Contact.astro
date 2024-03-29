@@ -25,40 +25,76 @@ import Button from "../../Button.astro";
       action="https://formsubmit.co/fevidsac@gmail.com"
       method="POST"
       target="_blank"
-      class="form-body text-sm md:text-base lg:text-lg flex flex-col gap-4">
-      <Input
-        label="Nombres completos"
-        key="fullName"
-        type="text"
-        placeholder="Ingresa tus nombres completos"
-        isRequired
-      />
+      id="form-contact"
+      class="text-sm md:text-base lg:text-lg flex flex-col gap-4">
+      <div class="form-control">
+        <Input
+          label="Nombres completos"
+          key="fullName"
+          type="text"
+          title="Nombre solo acepta letras y espacios en blanco"
+          placeholder="Ingrese sus nombres completos"
+          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\\s]+$"
+          isRequired
+        />
+      </div>
 
-      <Input
-        label="Razón Social"
-        key="companyName"
-        type="text"
-        placeholder="Ingresa tu razón social"
-        isRequired={false}
-      />
+      <div class="form-control">
+        <Input
+          label="Razón Social"
+          key="companyName"
+          type="text"
+          title="Razón social solo acepta caracteres alfanuméricos y espacios en blanco"
+          placeholder="Ingrese su Razón Social"
+          pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü0-9\\s]+$"
+          isRequired={false}
+        />
+      </div>
 
-      <Input label="RUC" key="ruc" type="number" placeholder="Ingresa el RUC de tu organización" isRequired={false} />
+      <div class="form-control">
+        <Input
+          label="RUC"
+          key="ruc"
+          type="number"
+          title="RUC solo acepta valores numéricos de 11 caracteres"
+          placeholder="Ingrese el RUC de su organización"
+          pattern="^[0-9]{11}$"
+          isRequired={false}
+        />
+      </div>
 
-      <Input
-        label="Teléfono o celular"
-        key="phone"
-        type="number"
-        placeholder="Ingresa tu teléfono o celular"
-        isRequired
-      />
+      <div class="form-control">
+        <Input
+          label="Teléfono o celular"
+          key="phone"
+          type="number"
+          title="Teléfono o celular puede tener como mínimo 6 y máximo 9 caracteres"
+          placeholder="Ingrese su número de teléfono o celular"
+          pattern="^[0-9]{6}$|^[0-9]{9}$"
+          isRequired
+        />
+      </div>
 
-      <Input label="Correo electrónico" key="email" type="email" placeholder="Ingresa tu correo electrónico" />
+      <div class="form-control">
+        <Input
+          label="Correo electrónico"
+          key="email"
+          type="email"
+          title="Email inválido. Porfavor ingrese correctamente su Email"
+          placeholder="Ingrese su correo electrónico"
+          pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+        />
+      </div>
 
-      <TextArea
-        label="Mensaje"
-        key="send"
-        placeholder="Ingresa los productos que necesitas cotizar y obtener información"
-      />
+      <div class="form-control">
+        <TextArea
+          label="Mensaje"
+          key="send"
+          title="Mensaje incorrecto, solo puedo mandar un mensaje con máximo de 1500 caracteres"
+          placeholder="Ingrese los productos que necesitas cotizar y obtener información"
+          dataPattern="^.{1,1500}$"
+        />
+      </div>
 
       <Button src="/send.svg" alt="Send form" slot="text-content">
         <span slot="text-content">Enviar formulario</span>
@@ -75,7 +111,17 @@ import Button from "../../Button.astro";
   </div>
 </section>
 
-<style lang="scss">
+<style>
+  .is-error {
+    padding: 1.5rem 0;
+    background-color: rgba(239, 68, 68, 0.9);
+    font-weight: bold;
+    color: white;
+    display: block;
+    border-radius: 0 0 0.5rem 0.5rem;
+    font-size: 1.125rem;
+  }
+
   .loader {
     width: 48px;
     height: 48px;
@@ -150,11 +196,62 @@ import Button from "../../Button.astro";
     duration: 900,
     easing: "ease-in-out",
   });
+
+  // Create message Error
+  const $formContact = document.getElementById("form-contact") as HTMLFormElement;
+  const $inputs = $formContact.querySelectorAll(".form-control [title]");
+
+  $inputs.forEach((input) => {
+    const $span = document.createElement("span");
+    $span.textContent = (input as HTMLElement).title;
+    $span.classList.add(
+      "opacity-0",
+      "invisible",
+      "max-h-0",
+      "py-1.5",
+      "bg-red-500/90",
+      "font-bold",
+      "text-white",
+      "block",
+      "rounded-b-lg",
+      "text-base",
+      "transition-all",
+      "ease-in-out",
+      "duration-300"
+    );
+    input instanceof HTMLTextAreaElement && $span.classList.add("-mt-2");
+    input.insertAdjacentElement("afterend", $span);
+  });
+
+  document.addEventListener("keyup", (e) => {
+    const isEvent = e.target instanceof Element;
+
+    if (isEvent && e.target.matches(".form-control [title]")) {
+      let pattern = "";
+      if (e.target instanceof HTMLInputElement) {
+        pattern = e.target.pattern;
+      } else {
+        pattern = (e.target as HTMLTextAreaElement).dataset.pattern || "";
+      }
+
+      const regex = new RegExp(pattern);
+      const value = (e.target as HTMLInputElement | HTMLTextAreaElement).value;
+
+      if (value !== "") {
+        return regex.test(value)
+          ? e.target.nextElementSibling?.classList.add("opacity-0", "invisible", "max-h-0")
+          : e.target.nextElementSibling?.classList.remove("opacity-0", "invisible", "max-h-0");
+      } else {
+        e.target.nextElementSibling?.classList.add("opacity-0", "invisible", "max-h-0");
+      }
+    }
+  });
+
   const $form = document.querySelector(".form-body");
   const $loader = document.querySelector(".loader");
 
   // Cargar el submit
-  $form?.addEventListener("submit", (e) => {
+  $form?.addEventListener("submit", (_) => {
     $loader?.classList.remove("hidden");
     setTimeout(() => {
       $loader?.classList.add("hidden");

@@ -4,26 +4,30 @@ type InputType = "text" | "password" | "email" | "number" | "date" | "color" | "
 interface Props {
   label: string;
   type: InputType;
+  title?: string;
   key?: string;
   className?: string;
+  pattern?: string;
   placeholder: string;
   isRequired?: boolean;
 }
 
-const { label, type, key, className, placeholder, isRequired = true } = Astro.props;
+const { label, type, title, key, className, pattern, placeholder, isRequired = true } = Astro.props;
 ---
 
-<div>
+<>
   <label class="block text-base md:text-lg text-gray-700 font-bold mb-2 text-left" for={key}>
     {label}
     {isRequired && <span class="text-red-500 font-bold text-base pl-0.5">*</span>}
   </label>
   <input
-    class={`${className} shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-ellipsis`}
+    class={`shadow appearance-none border rounded w-full p-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline text-ellipsis ${className}`}
     type={type}
     id={key}
     name={key}
+    title={title}
+    pattern={pattern}
     placeholder={placeholder}
-    required
+    required={isRequired}
   />
-</div>
+</>
