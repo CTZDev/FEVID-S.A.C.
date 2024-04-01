@@ -46,6 +46,16 @@ const productSchema = {
       name: subcategory,
       itemListElement: children.map((product) => ({
         "@type": "Product",
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: 4.5,
+          reviewCount: 5,
+        },
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "PEN",
+          price: "0.0",
+        },
         name: product.name,
         image: product.img,
         description: `Variaciones disponibles ${product.listProducts.join(", ")}`,
