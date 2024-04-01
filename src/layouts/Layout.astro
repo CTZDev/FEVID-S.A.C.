@@ -3,6 +3,7 @@ import "@fontsource/poppins/300.css";
 import "@fontsource/poppins/400.css";
 import "@fontsource/poppins/500.css";
 import "@fontsource/poppins/600.css";
+import SEO from "../components/SEO.astro";
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -18,11 +19,8 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="es">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="description" content={description} />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/icon.png" />
-    <title>{title}</title>
+    <!-- CHANGE CANONICAL FOR THE CORRECT LINK -->
+    <SEO title={title} description={description} canonical="https://fevidsac.netlify.app/" />
     <ViewTransitions fallback="swap" />
   </head>
 

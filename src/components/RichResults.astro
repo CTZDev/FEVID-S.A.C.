@@ -1,0 +1,167 @@
+---
+import { products } from "../config/products.json";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  url: "https://fevidsac.com",
+  image: "/logo.png",
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "sales",
+    contactOption: "TollFree",
+    telephone: "+51 923157617",
+    email: ["fevidsac@gmail.com", "fevidsac@hotmail.com"],
+    areaServed: "PE",
+    availableLanguage: "es",
+  },
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "San Martin de Porres",
+    addressRegion: "Lima",
+    addressCountry: "Perú",
+    streetAddress: "Mz. N Lt. 9 Assoc. MonteCarlo I",
+  },
+  sameAs: ["https://www.linkedin.com/in/fevid-sac-undefined-57309b2a1/", "https://github.com/CTZDev/FEVID-S.A.C."],
+  logo: "/logo.png",
+  name: "FEVID S.A.C.",
+  alternateName: "FEVID SAC",
+  brand: "FEVID SAC",
+  description:
+    "Fevidsac es una empresa dedicada a la venta al por mayor y al por menor de todo tipo de productos industriales, incluyendo productos eléctricos y de fontanería, estructuras metálicas, equipo de protección personal (EPP), materiales de construcción, productos forestales, suministros, ferretería en general y servicios.",
+  industry: ["Venta al por mayor", "Venta de productos nacionales e importados"],
+};
+
+const productSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  mainEntity: products.map(({ category, url, img, description, subcategories }) => ({
+    "@type": "ProductCollection",
+    name: category,
+    url: url,
+    image: img,
+    description: description,
+    itemListElement: subcategories.map(({ subcategory, children }) => ({
+      "@type": "ProductCategory",
+      name: subcategory,
+      itemListElement: children.map((product) => ({
+        "@type": "Product",
+        name: product.name,
+        image: product.img,
+        description: `Variaciones disponibles ${product.listProducts.join(", ")}`,
+      })),
+    })),
+  })),
+};
+
+const FAQs = [
+  {
+    question: "¿Qué tipo de productos industriales ofrecen?",
+    answer: `La amplia gama de productos industriales que ofrecemos son: ${products.map(({ category }) => category).join(", ")}.`,
+  },
+  {
+    question: "¿Venden productos al por mayor y menor?",
+    answer: "Vendemos productos al por mayor y menor a empresas, profesionales y particulares.",
+  },
+  {
+    question: "¿Cómo puedo realizar un pedido?",
+    answer:
+      "Puedes realizar un pedido a través de nuestro sitio web, teléfono, <strong>WhatsApp o correo electrónico.</strong>",
+  },
+  {
+    question: "¿Ofrecen asesoramiento técnico sobre sus productos?",
+    answer:
+      "Nuestro equipo de expertos puede ayudarte a elegir el producto adecuado para tus necesidades y responder cualquier pregunta que puedas tener",
+  },
+  // Por productos en específico
+  {
+    question: "¿Qué tipo de productos eléctricos ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de productos eléctricos para el hogar, oficina y industria, incluyendo interruptores, tomacorrientes, herramientas, etc.",
+  },
+  {
+    question: "¿Qué tipo de soluciones de energía solar ofrecen?",
+    answer:
+      "Ofrecemos soluciones de energía solar para hogares y negocios, incluyendo paneles solares, inversores, kits completos, etc.",
+  },
+  {
+    question: "¿Qué tipo de soluciones de cables eléctricos ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de cables eléctricos, incluyendo cables de baja tensión, cables de alta tensión, cables de datos, etc.",
+  },
+  {
+    question: "¿Qué tipo de productos hidráulicos ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de productos hidráulicos para la industria, incluyendo bombas, cilindros, válvulas, mangueras, etc.",
+  },
+  {
+    question: "¿Qué tipo de válvulas, tuberías y accesorios ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de válvulas, tuberías y accesorios, incluyendo válvulas de bola, válvulas de mariposa, tuberías de PVC, etc.",
+  },
+  {
+    question: "¿Qué tipo de productos de gasfitería para cocina y baño ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de productos de gasfitería para cocina y baño, incluyendo grifos, lavabos, inodoros, duchas, etc.",
+  },
+  {
+    question: "¿Qué tipo de productos de la línea HDPE ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de productos de la línea HDPE, incluyendo bridas, goteros, válvulas, uniones, etc.",
+  },
+  {
+    question: "¿Qué tipo de soplador regenerativo ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de sopladores regenerativos, incluyendo Soplador regenerativo compacto y eficiente, Blowers, etc.",
+  },
+  {
+    question: "¿Qué tipo de soluciones de automatización industrial ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de soluciones de automatización industrial, incluyendo caudalímetros, sensores, actuadores, etc.",
+  },
+  {
+    question: "¿Qué tipo de instrumentos de nivel y medición ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de instrumentos de nivel y medición, incluyendo amperímetros, vernier, escuadras y reglas magnéticas, etc.",
+  },
+  {
+    question: "¿Qué tipo de productos de ferretería industrial ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de productos de ferretería industrial, incluyendo herramientas, tornillos, tuercas, clavos, pinturas, etc.",
+  },
+  {
+    question: "¿Qué tipo de productos forestales ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de productos forestales, incluyendo madera, tableros, contrachapados y mucho más.",
+  },
+  {
+    question: "¿Qué tipo de implementos de seguridad y limpieza ofrecen?",
+    answer:
+      "Ofrecemos una amplia gama de implementos de seguridad y limpieza, incluyendo cascos, gafas de seguridad, guantes, calzado de seguridad, productos de limpieza, etc.",
+  },
+  {
+    question: "¿Qué tipo de productos de papelería ofrecen?",
+    answer: "Ofrecemos una amplia gama de productos de papelería, incluyendo papel, bolígrafos, lápices, agua, etc.",
+  },
+];
+
+/** https://developers.google.com/search/docs/appearance/structured-data/faqpage */
+const FAQSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    FAQs.map(({ answer, question }) => ({
+      "@type": "Question",
+      name: question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: answer,
+      },
+    })),
+  ],
+};
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(organizationSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(productSchema)} />
+<script type="application/ld+json" set:html={JSON.stringify(FAQSchema)} />

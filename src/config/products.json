@@ -5,6 +5,7 @@
       "id": "electricos",
       "url": "/productos/electricos",
       "img": "/products/electricos.webp",
+      "description": "Soluciones integrales para proyectos eléctricos, desde interruptores, tomacorrientes y herramientas",
       "subcategories": [
         {
           "subcategory": "Accesorios",
@@ -34,7 +35,16 @@
             {
               "name": "Alumbrado Público",
               "img": "/products-details/electricos/accesorios/alumbrado-publico.webp",
-              "listProducts": ["30 watts", "60 watts", "80 watts", "100 watts", "120 watts", "150 watts", "180 watts", "200 watts"]
+              "listProducts": [
+                "30 watts",
+                "60 watts",
+                "80 watts",
+                "100 watts",
+                "120 watts",
+                "150 watts",
+                "180 watts",
+                "200 watts"
+              ]
             },
             {
               "name": "Abrazaderas para Pastorales",
@@ -73,7 +83,13 @@
             {
               "name": "Abrazaderas de Soporte para Tubería",
               "img": "/products-details/electricos/accesorios/abrazaderas-soporte-tuberia.webp",
-              "listProducts": ["Doble Ala", "Perpendicular Ajustable", "Caja de Empalme 12x12x5", "Grapa 'U'", "Soporte Cuelga"]
+              "listProducts": [
+                "Doble Ala",
+                "Perpendicular Ajustable",
+                "Caja de Empalme 12x12x5",
+                "Grapa 'U'",
+                "Soporte Cuelga"
+              ]
             }
           ]
         },
@@ -178,7 +194,13 @@
             {
               "name": "Tapas ciegas PVC",
               "img": "/products-details/electricos/instalacion-hogar/tapas-ciegas-pvc.webp",
-              "listProducts": ["Tapa Rectangular", "Tapa Redonda", "Tapa Octogonal", "Tapa Flux Suplemento", "Canaletas Pasacables"]
+              "listProducts": [
+                "Tapa Rectangular",
+                "Tapa Redonda",
+                "Tapa Octogonal",
+                "Tapa Flux Suplemento",
+                "Canaletas Pasacables"
+              ]
             },
             {
               "name": "Accesorios PVC",
@@ -297,6 +319,7 @@
       "id": "energia-solar",
       "url": "/productos/energia-solar",
       "img": "/products/energia-solar.webp",
+      "description": "Energía del sol con paneles solares, inversores y kits completos para hogar o negocio",
       "subcategories": [
         {
           "subcategory": "Paneles Reguladores - Inversores - Baterías",
@@ -304,7 +327,11 @@
             {
               "name": "Paneles Solares",
               "img": "/products-details/energia-solar/paneles-solares.webp",
-              "listProducts": ["Panel Solar – Reflector 40W", "Panel Solar – Policristalino 10W a 500W", "Panel Solar – Monocristalino 10W a 500W"]
+              "listProducts": [
+                "Panel Solar – Reflector 40W",
+                "Panel Solar – Policristalino 10W a 500W",
+                "Panel Solar – Monocristalino 10W a 500W"
+              ]
             },
             {
               "name": "Regulador PWM / Regulador MPPT (Parámetros Técnicos Reguladores)",
@@ -359,6 +386,7 @@
       "id": "cables-electricos",
       "url": "/productos/cables-electricos",
       "img": "/products/cables-electricos.webp",
+      "description": "Amplia gama de cables para diferentes necesidades",
       "subcategories": [
         {
           "subcategory": "Cables - Accesorios",
@@ -394,7 +422,12 @@
             {
               "name": "Cables de Soldar y Conectores",
               "img": "/products-details/cables-electricos/cables-soldar-conectores.webp",
-              "listProducts": ["Cable de Soldar WS 1/0", "Cable de Soldar WS 2/0", "Cable de Soldar WS 3/0", "Conector Rapido Hembra/Macho"]
+              "listProducts": [
+                "Cable de Soldar WS 1/0",
+                "Cable de Soldar WS 2/0",
+                "Cable de Soldar WS 3/0",
+                "Conector Rapido Hembra/Macho"
+              ]
             }
           ]
         }
@@ -405,6 +438,7 @@
       "id": "hidraulicos",
       "url": "/productos/hidraulicos",
       "img": "/products/hidraulico.webp",
+      "description": "Componentes y sistemas hidráulicos para una amplia gama de aplicaciones industriales",
       "subcategories": [
         {
           "subcategory": "Rodamientos Accesorios",
@@ -443,6 +477,7 @@
       "id": "valvulas-tuberias-accesorios",
       "url": "/productos/valvulas-tuberias-accesorios",
       "img": "/products/valvulas-tuberias-accesorios.webp",
+      "description": "Sistema de válvulas, tuberías, codos, abrazaderas, etc",
       "subcategories": [
         {
           "subcategory": "Válvulas, Tuberías y Accesorios",
@@ -450,7 +485,13 @@
             {
               "name": "Valvula de Hierro Fundido, Bronce é Inoxidable",
               "img": "/products-details/valvulas-tuberias-accesorios/valvula-hierro-bronce.webp",
-              "listProducts": ["Válvulas Esféricas", "Válvulas de Compuerta", "Válvulas Tipo Mariposa", "Válvulas de Globo", "Válvulas Check"]
+              "listProducts": [
+                "Válvulas Esféricas",
+                "Válvulas de Compuerta",
+                "Válvulas Tipo Mariposa",
+                "Válvulas de Globo",
+                "Válvulas Check"
+              ]
             },
             {
               "name": "Conexiones Soldables, Hierro Fundido, Bronce é Inoxidable",
@@ -460,7 +501,17 @@
             {
               "name": "Tuberías y Conexiones PVC",
               "img": "/products-details/valvulas-tuberias-accesorios/tuberias-conexiones-pvc.webp",
-              "listProducts": ["Válvulas", "Codos", "Bridas", "Reducciones", "Niples", "Tee", "Uniones", "Bushing", "Tapones"]
+              "listProducts": [
+                "Válvulas",
+                "Codos",
+                "Bridas",
+                "Reducciones",
+                "Niples",
+                "Tee",
+                "Uniones",
+                "Bushing",
+                "Tapones"
+              ]
             }
           ]
         }
@@ -471,6 +522,7 @@
       "id": "gasfiteria-cocina-baño",
       "url": "/productos/gasfiteria-cocina-baño",
       "img": "/products/gasfiteria-cocina-banio.webp",
+      "description": "Soluciones para cocina y baño, incluyendo grifería, lavabos, inodoros, duchas y accesorios",
       "subcategories": [
         {
           "subcategory": "Grifería - Accesorios",
@@ -478,7 +530,13 @@
             {
               "name": "Cocina y Accesorios",
               "img": "/products-details/gasfiteria-cocina-banio/cocina-accesorios.webp",
-              "listProducts": ["Grifo Standard", "Llaves para Lavadero", "Mezcladora para Lavadero", "Lavadero 1 Poza", "Lavadero 2 Pozas"]
+              "listProducts": [
+                "Grifo Standard",
+                "Llaves para Lavadero",
+                "Mezcladora para Lavadero",
+                "Lavadero 1 Poza",
+                "Lavadero 2 Pozas"
+              ]
             },
             {
               "name": "Baños y Accesorios",
@@ -488,7 +546,12 @@
             {
               "name": "Tubos y Accesorios",
               "img": "/products-details/gasfiteria-cocina-banio/tubos-accesorios.webp",
-              "listProducts": ["Tubos PVC para Alcantarillado", "Conexiones PVC para Alcantarillado", "Cinta Teflón", "Pegamentos PVC"]
+              "listProducts": [
+                "Tubos PVC para Alcantarillado",
+                "Conexiones PVC para Alcantarillado",
+                "Cinta Teflón",
+                "Pegamentos PVC"
+              ]
             }
           ]
         }
@@ -499,6 +562,7 @@
       "id": "linea-HDPE",
       "url": "/productos/linea-HDPE",
       "img": "/products/linea-HDPE.webp",
+      "description": "Tuberías de polietileno para aplicaciones de agua potable, gas y alcantarillado",
       "subcategories": [
         {
           "subcategory": "Geomembrana - Accesorios",
@@ -506,7 +570,17 @@
             {
               "name": "Conexiones y Accesorios",
               "img": "/products-details/linea-HDPE/conexiones-accesorios.webp",
-              "listProducts": ["Válvulas", "Uniones", "Tee", "Goteros", "Reducciones", "Collarines", "Enlace Recto", "Tapones", "Bridas"]
+              "listProducts": [
+                "Válvulas",
+                "Uniones",
+                "Tee",
+                "Goteros",
+                "Reducciones",
+                "Collarines",
+                "Enlace Recto",
+                "Tapones",
+                "Bridas"
+              ]
             },
             {
               "name": "Mangueras/Mangas HDPE – NTP-ISO 4427-2008 PE 100",
@@ -549,6 +623,7 @@
       "id": "sopladores-regenerativos",
       "url": "/productos/sopladores-regenerativos",
       "img": "/products/soplador-regenerativo.webp",
+      "description": "Equipos para aplicaciones industriales como transporte neumático y aireación",
       "subcategories": [
         {
           "subcategory": "Blower",
@@ -593,6 +668,7 @@
       "id": "automatizacion-industrial",
       "url": "/productos/automatizacion-industrial",
       "img": "/products/automatizacion-industrial.webp",
+      "description": "Controles de automatización para productividad del proceso industrial",
       "subcategories": [
         {
           "subcategory": "Sensores",
@@ -622,7 +698,9 @@
             {
               "name": "Caudalímetros Electromagnéticos SIEMENS (SITRANS MAG 8000/MAG 8000 CT)",
               "img": "/products-details/automatizacion-industrial/caudalimetro-electromagnetico.webp",
-              "listProducts": ["Clase de Protección Anticorrosiva C4M para Tendido Subterráneo y Aplicaciones Sumergidas"]
+              "listProducts": [
+                "Clase de Protección Anticorrosiva C4M para Tendido Subterráneo y Aplicaciones Sumergidas"
+              ]
             },
             {
               "name": "Caudalímetros Vortex (Caudalímetro Magneto Inductivo SM6000)",
@@ -657,6 +735,7 @@
       "id": "instrumental-nivel-medicion",
       "url": "/productos/instrumental-nivel-medicion",
       "img": "/products/instrumental-nivel-medicion.webp",
+      "description": "Equipos de precisión para medir y controlar niveles, caudales, presión y temperatura",
       "subcategories": [
         {
           "subcategory": "Digitales y Analógicos",
@@ -702,6 +781,7 @@
       "id": "ferreteria-industrial",
       "url": "/productos/ferreteria-industrial",
       "img": "/products/ferreteria-industrial.webp",
+      "description": "Herramientas y suministros para el mantenimiento y reparación industrial",
       "subcategories": [
         {
           "subcategory": "Cisternas Bombas",
@@ -722,12 +802,24 @@
             {
               "name": "Tanques de Agua (Accesorios)",
               "img": "/products-details/ferreteria-industrial/tanque-agua-accesorios.webp",
-              "listProducts": ["Conexiones de Drenaje", "Conexiones Hexagonal", "Niples Short", "Tubo de Aireación", "Válvulas y Flotadores"]
+              "listProducts": [
+                "Conexiones de Drenaje",
+                "Conexiones Hexagonal",
+                "Niples Short",
+                "Tubo de Aireación",
+                "Válvulas y Flotadores"
+              ]
             },
             {
               "name": "Tanques de Agua (Bombas de 0.5HP a 3HP)",
               "img": "/products-details/ferreteria-industrial/tanque-agua-bomba.webp",
-              "listProducts": ["Bombas Periféricas", "Bombas Centrifugas", "Niples Short", "Tubo de Aireación", "Válvulas y Flotadores"]
+              "listProducts": [
+                "Bombas Periféricas",
+                "Bombas Centrifugas",
+                "Niples Short",
+                "Tubo de Aireación",
+                "Válvulas y Flotadores"
+              ]
             }
           ]
         },
@@ -770,7 +862,14 @@
             {
               "name": "Coberturas",
               "img": "/products-details/ferreteria-industrial/cobertura.webp",
-              "listProducts": ["Fibraforte", "Fibrocemento", "Policarbonato", "Aluzinc", "Malla Rashel", "Mantas Plásticas"]
+              "listProducts": [
+                "Fibraforte",
+                "Fibrocemento",
+                "Policarbonato",
+                "Aluzinc",
+                "Malla Rashel",
+                "Mantas Plásticas"
+              ]
             },
             {
               "name": "Pernerìa (En todas las medidas)",
@@ -876,7 +975,13 @@
             {
               "name": "Equipos para pintado",
               "img": "/products-details/ferreteria-industrial/equipos-pintado.webp",
-              "listProducts": ["Compresora Verticales", "Compresora Móvil", "Sopletes para Pintado", "Sopletes Eléctricos", "Manguera"]
+              "listProducts": [
+                "Compresora Verticales",
+                "Compresora Móvil",
+                "Sopletes para Pintado",
+                "Sopletes Eléctricos",
+                "Manguera"
+              ]
             }
           ]
         },
@@ -967,6 +1072,7 @@
       "id": "productos-forestales",
       "url": "/productos/productos-forestales",
       "img": "/products/productos-forestales.webp",
+      "description": "Madera, tableros y otros productos forestales para la construcción, carpintería y decoración",
       "subcategories": [
         {
           "subcategory": "Forestales y Agrícolas",
@@ -990,7 +1096,16 @@
             {
               "name": "Productos Agrícolas",
               "img": "/products-details/productos-forestales/productos-agricolas.webp",
-              "listProducts": ["Insecticidas", "Plaguicidas", "Herbicidas", "Fertilizantes", "Compost", "Azufre", "Grass Natural", "Grass Sintético"]
+              "listProducts": [
+                "Insecticidas",
+                "Plaguicidas",
+                "Herbicidas",
+                "Fertilizantes",
+                "Compost",
+                "Azufre",
+                "Grass Natural",
+                "Grass Sintético"
+              ]
             },
             {
               "name": "Herramientas",
@@ -1006,6 +1121,7 @@
       "id": "implementos-seguridad-limpieza",
       "url": "/productos/implementos-seguridad-limpieza",
       "img": "/products/implementos-seguridad-limpieza.webp",
+      "description": "Equipos de protección personal y productos de limpieza para un ambiente seguro y saludable",
       "subcategories": [
         {
           "subcategory": "EPPS - Productos de Limpieza",
@@ -1064,6 +1180,7 @@
       "id": "papeleria",
       "url": "/productos/papeleria",
       "img": "/products/papeleria.webp",
+      "description": "Amplia gama de productos de papelería para la oficina, el hogar y la escuela",
       "subcategories": [
         {
           "subcategory": "Varios",

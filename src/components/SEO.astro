@@ -1,0 +1,48 @@
+---
+import RichResults from "../components/RichResults.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  canonical?: string;
+  image?: string;
+}
+
+const { title, description, canonical, image = "/logo.png" } = Astro.props as Props;
+const canonicalURL = canonical ? new URL(canonical, Astro.site) : new URL(Astro.url.pathname, Astro.site);
+---
+
+<title>{title}</title>
+
+<link rel="canonical" href={canonicalURL} />
+<link rel="icon" type="image/svg+xml" href="/icon.png" />
+<link rel="apple-touch-icon" href="/icon.png" />
+
+<meta charset="UTF-8" />
+<meta name="description" content={description} />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#fff" />
+<meta
+  name="keywords"
+  content="fevidsac, venta, servicios, productos, industriales, estructuras, materiales, marcas, importación, mayorista,
+	minorista, eléctricos, gasfíteria, metálicas, EPP's, construcción, forestales, proveeduría, ferretería"
+/>
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:site" content="@VentaProductosIndustriales" />
+<meta name="twitter:creator" content="@FevidSAC" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.url)} />
+
+<meta name="og:image" content={new URL(image, Astro.url)} />
+<meta name="og:title" content={title} />
+<meta name="og:description" content={description} />
+<meta name="og:url" content={Astro.url} />
+<meta name="og:site_name" content="Fevid SAC" />
+<meta name="og:type" content="website" />
+<meta name="og:locale" content="es_ES" />
+
+<meta name="robots" content="index, follow" />
+<meta name="googlebot" content="index, follow" />
+
+<RichResults />
