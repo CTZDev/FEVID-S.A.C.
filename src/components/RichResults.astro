@@ -41,10 +41,10 @@ const productSchema = {
     url: url,
     image: img,
     description: description,
-    itemListElement: subcategories.map(({ subcategory, children }) => ({
+    item: subcategories.map(({ subcategory, children }) => ({
       "@type": "ProductCategory",
       name: subcategory,
-      itemListElement: children.map((product) => ({
+      item: children.map((product) => ({
         "@type": "Product",
         aggregateRating: {
           "@type": "AggregateRating",
