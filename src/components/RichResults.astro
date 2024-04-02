@@ -29,7 +29,6 @@ const organizationSchema = {
   brand: "FEVID SAC",
   description:
     "Fevidsac es una empresa dedicada a la venta al por mayor y al por menor de todo tipo de productos industriales, incluyendo productos eléctricos y de fontanería, estructuras metálicas, equipo de protección personal (EPP), materiales de construcción, productos forestales, suministros, ferretería en general y servicios.",
-  industry: ["Venta al por mayor", "Venta de productos nacionales e importados"],
 };
 
 const productSchema = {
@@ -47,6 +46,7 @@ const productSchema = {
       item: {
         "@type": "Product",
         name: subcategory,
+        image: img,
         offers: {
           "@type": "Offer",
           priceCurrency: "PEN",
@@ -57,9 +57,10 @@ const productSchema = {
           ratingValue: 4.5,
           reviewCount: 5,
         },
-        additionalProperty: children.map((product, index) => ({
+        additionalProperty: children.map((product) => ({
           "@type": "PropertyValue",
           name: product.name,
+          image: product.img,
           value: `Variaciones disponibles ${product.listProducts.join(", ")}`,
         })),
       },
