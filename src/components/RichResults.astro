@@ -35,32 +35,46 @@ const organizationSchema = {
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  mainEntity: products.map(({ category, url, img, description, subcategories }) => ({
-    "@type": "ProductCollection",
-    name: category,
-    url: url,
-    image: img,
-    description: description,
-    item: subcategories.map(({ subcategory, children }) => ({
-      "@type": "ProductCategory",
-      name: subcategory,
-      item: children.map((product) => ({
-        "@type": "Product",
-        aggregateRating: {
-          "@type": "AggregateRating",
-          ratingValue: 4.5,
-          reviewCount: 5,
-        },
-        offers: {
-          "@type": "Offer",
-          priceCurrency: "PEN",
-          price: "0.0",
-        },
-        name: product.name,
-        image: product.img,
-        description: `Variaciones disponibles ${product.listProducts.join(", ")}`,
+  mainEntity: products.map(({ category, url, img, description, subcategories }, index) => ({
+    "@type": "ListItem",
+    position: index + 1,
+    item: {
+      "@type": "Product",
+      name: category,
+      image: img,
+      description: description,
+      url: url,
+      offers: {
+        "@type": "Offer",
+        priceCurrency: "PEN",
+        price: "0.0",
+      },
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: 4.9,
+        reviewCount: 5,
+      },
+      additionalProperty: subcategories.map(({ subcategory, children }) => ({
+        "@type": "PropertyValue",
+        name: subcategory,
+        value: children.map((product) => ({
+          "@type": "Product",
+          aggregateRating: {
+            "@type": "AggregateRating",
+            ratingValue: 4.9,
+            reviewCount: 5,
+          },
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "PEN",
+            price: "0.0",
+          },
+          name: product.name,
+          image: product.img,
+          description: `Variaciones disponibles ${product.listProducts.join(", ")}`,
+        })),
       })),
-    })),
+    },
   })),
 };
 
