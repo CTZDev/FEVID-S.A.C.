@@ -35,46 +35,36 @@ const organizationSchema = {
 const productSchema = {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  mainEntity: products.map(({ category, url, img, description, subcategories }, index) => ({
-    "@type": "ListItem",
-    position: index + 1,
-    item: {
-      "@type": "Product",
-      name: category,
-      image: img,
-      description: description,
-      url: url,
-      offers: {
-        "@type": "Offer",
-        priceCurrency: "PEN",
-        price: "0.0",
-      },
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: 4.9,
-        reviewCount: 5,
-      },
-      additionalProperty: subcategories.map(({ subcategory, children }) => ({
-        "@type": "PropertyValue",
+  mainEntity: products.map(({ category, url, img, description, subcategories }) => ({
+    "@type": "ItemList",
+    name: category,
+    url: url,
+    image: img,
+    description: description,
+    itemListElement: subcategories.map(({ subcategory, children }, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      item: {
+        "@type": "Product",
         name: subcategory,
-        value: children.map((product) => ({
-          "@type": "Product",
-          aggregateRating: {
-            "@type": "AggregateRating",
-            ratingValue: 4.9,
-            reviewCount: 5,
-          },
-          offers: {
-            "@type": "Offer",
-            priceCurrency: "PEN",
-            price: "0.0",
-          },
+        offers: {
+          "@type": "Offer",
+          priceCurrency: "PEN",
+          price: "0.0",
+        },
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: 4.5,
+          reviewCount: 5,
+        },
+        additionalProperty: children.map((product, index) => ({
+          "@type": "PropertyValue",
           name: product.name,
-          image: product.img,
-          description: `Variaciones disponibles ${product.listProducts.join(", ")}`,
+          value: `Variaciones disponibles ${product.listProducts.join(", ")}`,
+          position: index + 1,
         })),
-      })),
-    },
+      },
+    })),
   })),
 };
 
