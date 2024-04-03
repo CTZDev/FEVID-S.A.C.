@@ -1,6 +1,7 @@
 {
   "name": "landing-favid",
   "type": "module",
+  "homepage": "https://fevidsac.com",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -24,3 +25,4 @@
     "tailwindcss-animated": "^1.0.1"
   }
 }
+
