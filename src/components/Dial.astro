@@ -4,19 +4,18 @@ export interface Props {
   target?: string;
   src: string;
   alt: string;
-  classPosition: string;
+  className: string;
   classImg: string;
   onclick?: string;
 }
 
-const { href, target, src, alt, classPosition, classImg, onclick } = Astro.props;
+const { href, target, src, alt, className, classImg, onclick } = Astro.props;
 ---
 
 <a
-  {...Astro.props}
   href={href}
   target={target}
   onclick={onclick}
-  class={`cursor-pointer fixed rounded-full transform hover:scale-105 transition-transform  ${classPosition} z-10`}>
+  class={`cursor-pointer fixed rounded-full transform hover:scale-105 transition-transform z-10 ${className}`}>
   <img src={src} alt={alt} class={classImg} />
 </a>

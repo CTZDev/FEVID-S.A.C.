@@ -3,13 +3,13 @@ import Link from "./Link.astro";
 import Modal from "./Modal.astro";
 ---
 
-<div class="hero relative pb-8 animate-fade animate-duration">
-  <figure class="relative inline-block overflow-hidden w-full">
+<div class="hero relative pb-8">
+  <figure class="relative first-line:inline-block overflow-hidden w-full">
     <img
       src="/hero.webp"
       alt="Industrial Products"
       width="100%"
-      class="block object-cover h-screen -mt-20"
+      class="object-cover h-screen -mt-20 animate-fade-down animate-duration-1000 animate-ease-out"
     />
   </figure>
 
@@ -40,24 +40,24 @@ import Modal from "./Modal.astro";
 
       <!-- These two components are related (Link and Modal) -->
       <Link
-        href="mailto:fevidsac@gmail.com;fevidsac@hotmail.com?subject=Solicitud%20de%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20productos&body=Hola%2C%20Quisiera%20obtener%20mayor%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20sus%20productos%20(Nacionales%20e%20Importados)"
+        href="mailto:fevidsac@gmail.com;fevidsac@hotmail.com;ventas@fevidsac.com?subject=Solicitud%20de%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20productos&body=Hola%2C%20Quisiera%20obtener%20mayor%20informaci%C3%B3n%20del%20cat%C3%A1logo%20de%20productos"
         className="link-email border-none rounded-full py-2 text-white min-w-60 md:justify-center md:min-w-72"
         src="/email.svg"
-        alt="Icono de Outlook"
+        alt="Icono de Email"
         contentText="Cotizar por Email"
         onclick="modalLinkHero.showModal()"
       />
 
       <Modal
         id="modalLinkHero"
-        text="Envia la información que necesitas a nuestros correos corporativos y nos pondremos en comunicación con usted en breve."
+        text="Envía la información que necesitas a nuestros correos corporativos y nos pondremos en comunicación con usted en breve."
       />
     </div>
   </div>
 </div>
 
 <style lang="scss">
-  figure::before {
+  figure::after {
     content: "";
     position: absolute;
     top: 0;

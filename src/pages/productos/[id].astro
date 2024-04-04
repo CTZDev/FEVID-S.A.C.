@@ -59,8 +59,9 @@ const products = typeof id === "string" ? getProductsBy({ id }) : null;
                         />
 
                         <Link
-                          href={`mailto:fevidsac@gmail.com;fevidsac@hotmail.com?subject=Solicitud%20de%20informaci%C3%B3n%20de%20la%20categor%C3%ADa%20%3A%20${decodeURIComponent(products.category.toUpperCase())}%20&body=Producto%3A%20${decodeURIComponent(child.name)}%20%2F%2F%20Necesito%20Informaci%C3%B3n%20detallada`}
+                          href={`mailto:fevidsac@gmail.com;fevidsac@hotmail.com;ventas@fevidsac.com?subject=Solicitud%20de%20informaci%C3%B3n%20de%20la%20categor%C3%ADa%20%3A%20${decodeURIComponent(products.category.toUpperCase())}%20&body=Producto%3A%20${decodeURIComponent(child.name)}%20%2F%2F%20Necesito%20Informaci%C3%B3n%20detallada`}
                           className="link-email text-white p-1.5 rounded-lg"
+                          target="_blank"
                           src="/email.svg"
                           alt="Icono de Outlook"
                           contentText="Cotizar por Email"
