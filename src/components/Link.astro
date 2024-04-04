@@ -3,21 +3,23 @@ interface Props {
   href?: string;
   target?: string;
   className?: string;
-  src: string;
-  alt: string;
   contentText: string;
+  hasImage?: boolean;
+  src?: string;
+  alt?: string;
   onclick?: string;
 }
 
-const { href, target, className, src, alt, contentText, onclick } = Astro.props;
+const { href, target = "_blank", className, contentText, hasImage = true, src, alt, onclick } = Astro.props;
 ---
 
 <a
   href={href}
   target={target}
   onclick={onclick}
-  class={`${className} link flex items-center gap-3 text-sm font-semibold transition-all cursor-pointer md:text-base`}>
-  <img src={src} alt={alt} width="32" height="32" class="ml-5 md:ml-0" />
+  rel="noopener noreferrer"
+  class={`link flex items-center gap-3 text-sm font-normal transition-all hover:font-semibold cursor-pointer md:text-base lg:text-lg ${className}`}>
+  {hasImage && <img src={src} alt={alt} width="30" height="30" class="ml-5 md:ml-0" />}
   <span>{contentText}</span>
 </a>
 
