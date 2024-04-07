@@ -7,14 +7,16 @@ interface Props {
 const { id, text } = Astro.props;
 ---
 
-<dialog id={id} class="max-w-[600px] absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4">
+<dialog
+  id={id}
+  class="max-w-[600px] min-w-[350px] absolute top-2/4 left-2/4 transform -translate-x-2/4 -translate-y-2/4">
   <div class="modal-box px-6 py-8">
     <h3 class="font-bold text-lg mb-4">COTIZACIÓN POR EMAIL</h3>
     <p class="py-5">
       {text}
     </p>
     <div class="modal-body">
-      <h4 class="font-bold">Correos Corporativos</h4>
+      <h4 class="font-bold">Correos Corporativos</h4>g
       <p class="flex pt-2 gap-2">
         <img src="/check.svg" alt="Check Email Enterprise" />
         ventas@fevidsac.com
