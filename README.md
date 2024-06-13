@@ -1,54 +1,45 @@
-# Astro Starter Kit: Basics
+# FEVID S.A.C.
+Este repositorio contiene el código fuente y la documentación asociada al proyecto de FEVID S.A.C. Aquí encontrarás información sobre el desarrollo y la implementación de soluciones para la empresa.
 
-```sh
-npm create astro@latest -- --template basics
-```
+![FEVID SAC](https://repository-images.githubusercontent.com/766321213/3c9cd857-db37-475c-acbf-1a8118a0a0df)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+## Descripción del Proyecto
+FEVID S.A.C. se dedica a la producción y distribución de productos electrónicos y servicios relacionados. Este repositorio almacena todo el código y la documentación técnica necesaria para la gestión y optimización de los procesos internos y las operaciones de la empresa.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Estructura del Repositorio
+- **/src**: Código fuente del proyecto.
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+## Instalación
 
-## 🚀 Project Structure
+1. **Clonar el repositorio:**
+   git clone https://github.com/CTZDev/FEVID-S.A.C.git
+2. **Instalar dependencias:**
+  cd FEVID-S.A.C
+  npm install
 
-Inside of your Astro project, you'll see the following folders and files:
+## Página Web
+El proyecto cuenta con una página web accesible para los usuarios de FEVID S.A.C. A continuación, encontrarás los detalles para acceder y explorar la página:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+- **URL:** [https://www.fevidsac.com](https://www.fevidsac.com)
+- **Funcionalidades:** La página web permite a los usuarios ver información de productos, realizar pedidos y contactar con el servicio al cliente.
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Uso
+1. **Ejecutar la aplicación:**
+  npm start
+2. **Acceder a la aplicación en el navegador:**
+   http://localhost:3000
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+## Contribución
 
-Any static assets, like images, can be placed in the `public/` directory.
+Si deseas contribuir al proyecto, sigue estos pasos:
+1. Haz un fork del repositorio.
+2. Crea una nueva rama (`git checkout -b feature/Mejora`).
+3. Realiza tus cambios y haz commits explicativos (`git commit -am 'Añade una mejora genial'`).
+4. Haz push a la rama (`git push origin feature/MejoraGenial`).
+5. Abre un Pull Request.
 
-## 🧞 Commands
+## Licencia
+Este proyecto está licenciado bajo la Licencia MIT. Desarrollado por Carlos Terán Zavaleta
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+## Contacto
+Para cualquier duda o consulta sobre el proyecto, puedes contactar al equipo de desarrollo en [info@fevidsac.com](mailto:info@fevidsac.com)
